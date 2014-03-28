@@ -10,7 +10,7 @@ $pad-break    : 480px;
 $pad: $pad-break $pad-columns;
 
 $desktop-columns  : 12;
-$desktop-break    : 940px;
+$desktop-break    : 800px;
 $desktop: $desktop-break $desktop-columns;
 
 // debug
@@ -150,6 +150,7 @@ $off-canvas-main-bg-color: white;
     right: auto;
     @include span-columns($off-canvas-menu-width);
     max-width: 267px;
+    min-width: 225px;
     @media (max-height: 610px) {
       position: relative;
     }

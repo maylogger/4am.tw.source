@@ -69,6 +69,8 @@ h6 {
   @include background( linear-gradient( to right, rgba(black,.7) 50%, rgba(black,0)  ) );
   color: white;
   &:hover, &:active {
+    color: black;
+    text-decoration: none;
     background: rgba(white,.7);
     @include background( linear-gradient( to right, rgba(white,.7) 50%, rgba(white,0)  ) );
   }
@@ -101,6 +103,14 @@ p {
   & + & {
     text-indent: 2em;
   }
+}
+
+em, i {
+  font-family: monospace;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 14px;
 }
 
 strong, b {
@@ -165,7 +175,7 @@ dl {
 
 // inline style
 a {
-  @include link-colors($global-link-color, $global-link-hover-color);
+  @include link-colors(white);
   @include hover-link;
   img {
     border: none;
@@ -177,3 +187,8 @@ img {
   @include trailer(1);
 }
 
+.main {
+  a {
+    @extend %din;
+  }
+}
