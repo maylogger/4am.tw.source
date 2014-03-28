@@ -1,0 +1,15 @@
+.photo-item {
+  @include trailer(2);
+  text-align: center;
+  .photo {
+    img {
+      margin: 0 auto;
+    }
+  }
+  .text {
+    @include adjust-font-size-to(15px);
+  }
+
+
+
+}

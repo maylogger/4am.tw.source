@@ -1,4 +1,6 @@
-h1 OK GO!!!
-- 10.times do
-  p= zh_lorem_paragraphs 5
+.photo-item-group
+  - 10.times do
+    .photo-item
+      .photo: img.lazy data-original="//placehold.it/1024x768"
+      p.text= lorem_sentences(2)
 
