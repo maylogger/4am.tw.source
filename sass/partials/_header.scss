@@ -1,7 +1,14 @@
 .header {
   .logo {
-    @include adjust-font-size-to(20px);
+    // normal style
+    @include adjust-font-size-to(28px);
+    @extend %futura;
     em { font-style: normal; }
-    a {}
+    a { color: $color-gray; }
+    // replace text
+    @include replace-text-with-svg("logo");
+    width: auto;
+    height: 0px;
+    padding-top: 15%;
   }
 }

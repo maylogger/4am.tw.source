@@ -156,6 +156,8 @@ html, body { height: 100%; }
   .open-menu .page { overflow: visible; }
   .open-menu .menu-inner { overflow: visible; height: auto; }
   .open-menu .main { height: auto; overflow: visible; -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); } }
+.header .logo { font-family: "Futura", "Arial", sans-serif; }
+
 body { font-family: "PalatinoLinotype-Roman", "Palatino-Roman", "TimesNewRomanPSMT", "Times", serif; }
 
 body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: #444444; }
@@ -221,5 +223,6 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 .timeline-item .title { float: left; font-size: 20px; line-height: 24px; }
 .timeline-item .time:before { content: ''; position: absolute; border: 6px solid black; width: 8px; height: 8px; background-color: white; left: -9px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
 
-.header .logo { font-size: 20px; line-height: 24px; }
+.header .logo { font-size: 28px; line-height: 48px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1395996380'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/logo.svg?1395996380'); width: auto; height: 0px; padding-top: 15%; }
 .header .logo em { font-style: normal; }
+.header .logo a { color: #e4e4e3; }
