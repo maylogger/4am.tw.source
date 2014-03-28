@@ -27,32 +27,59 @@ body {
 #{headings()} {
   @include reset-box-model;
   font-weight: normal;
+  @extend %din;
+  @include trailer(1);
 }
 h1 {
-  @include adjust-font-size-to($font-size-xxl);
+  @include adjust-font-size-to($font-size-l);
+  color: white;
 }
 h2 {
-  @include adjust-font-size-to($font-size-xl);
+  @include adjust-font-size-to($font-size-m);
+  color: white;
 }
 h3 {
-  @include adjust-font-size-to($font-size-l);
+  @include adjust-font-size-to($font-size-m);
+  @include reset-box-model;
+  @include leader(1);
 }
 h4 {
-  @include adjust-font-size-to($font-size-m);
+  @include adjust-font-size-to($font-size-s);
+  @include reset-box-model;
 }
 h5 {
   @include adjust-font-size-to($font-size-s);
+  @include reset-box-model;
 }
 h6 {
-  @include adjust-font-size-to($font-size-xs);
+  @include adjust-font-size-to($font-size-s);
+  @include reset-box-model;
+}
+
+hr {
+  display: block;
+  border: none;
+  border-top: 1px solid darken($background-gray, 60%);
+  width: 70%;
+  // margin: 0 auto;
+  margin-left: 0;
+  @include trailer(3);
+  @include leader(3);
 }
 
 p {
   @include leader(0);
   @include trailer(1);
   @include adjust-font-size-to($base-font-size);
+  & + & {
+    text-indent: 2em;
+  }
 }
 
+strong, b {
+  @extend %din;
+  color: white;
+}
 
 // 引用他處文獻
 blockquote {
@@ -123,9 +150,3 @@ img {
   @include trailer(1);
 }
 
-// divider
-hr, .divider {
-  @include leader(1);
-  @include trailer(1);
-  border-top: 1px solid $global-divider;
-}

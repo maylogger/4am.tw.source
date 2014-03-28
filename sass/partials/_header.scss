@@ -15,6 +15,7 @@
   }
   .logo {
     // normal style
+    @include reset-box-model;
     @include adjust-font-size-to(28px);
     @extend %futura;
     em { font-style: normal; display: block; }
@@ -93,7 +94,7 @@
     }
     @include at-breakpoint($desktop) {
       opacity: .7;
-      width: 350px;
+      width: 320px;
       left: -.7em;
       @media (max-height: 610px) {
         bottom: -3em;
