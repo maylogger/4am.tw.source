@@ -1,0 +1,23 @@
+.timeline
+  .timeline-bar
+  .timeline-item
+    .date= lorem_date("%m/%d")
+    .timeline-item-content
+      .title= lorem_words(rand(5)+3)
+  .timeline-item
+    .time 4 am
+    .timeline-item-content
+      p.text= lorem_paragraph
+      .image: img src="//placehold.it/600x400"
+  .timeline-item
+    .time= "#{rand(13)}"+" am"
+    .timeline-item-content
+      p.text= lorem_paragraph
+      .image: img src="//placehold.it/600x400"
+  .timeline-item
+    .time= "#{rand(13)}"+" pm"
+    .timeline-item-content
+      p.text= lorem_paragraph
+      .image: img src="//placehold.it/600x400"
+  .timeline-item.end
+    .time
