@@ -257,11 +257,11 @@ img { max-width: 100%; margin-bottom: 24px; }
   .menu-list a:after { position: relative; top: -.1em; color: #e4e4e3; }
   .menu-list a:hover, .menu-list a.active { background: rgba(220, 221, 222, 0.3); }
   .menu-list a.active { text-decoration: underline; } }
-.menu-list .social { overflow: hidden; background: #dcddde; margin: 0; padding: 0; border: 0; list-style: none; padding-top: 12px; }
-.menu-list .social h2 { background: #111111; margin: 0; padding: 0; border: 0; font-weight: normal; padding: 0 15px; font-size: 12px; line-height: 24px; }
+.menu-list .social { overflow: hidden; background: #dcddde; margin: 0; padding: 0; border: 0; list-style: none; }
+.menu-list .social h2 { margin: 0; padding: 0; border: 0; padding: 0 15px; background: rgba(17, 17, 17, 0.2); font-weight: normal; font-size: 12px; line-height: 24px; }
 .menu-list .social li { width: 50%; float: left; }
 .menu-list .social a:after { float: none; top: 0; }
-@media (min-width: 800px) { .menu-list .social { background: transparent; } }
+@media (min-width: 800px) { .menu-list .social { margin-top: 24px; background: transparent; } }
 
 .timeline { position: relative; width: 97%; float: right; }
 @media (min-width: 480px) { .timeline { float: none; width: 95%; margin: 0 auto; } }
