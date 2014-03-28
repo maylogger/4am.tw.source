@@ -93,7 +93,6 @@ $off-canvas-main-bg-color: white;
   z-index: 110;
   padding: 0 $gutter-width 10em;
   height: 100%;
-  overflow: auto;
   max-width: 800px;
   margin: 0 auto;
   width: 80%;
@@ -161,7 +160,7 @@ $off-canvas-main-bg-color: white;
     overflow: visible;
   }
   .main {
-    @include padding-leader(6.5);
+    @include padding-leader(1);
     display: block;
     @include span-columns( ( $total_columns - $off-canvas-menu-width ) omega, $total_columns);
   }

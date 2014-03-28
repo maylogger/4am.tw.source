@@ -30,7 +30,7 @@ body {
   @extend %din;
   @include trailer(1);
 }
-h1 {
+h1, %h1 {
   @include adjust-font-size-to($font-size-l);
   color: white;
 }
@@ -56,11 +56,36 @@ h6 {
   @include reset-box-model;
 }
 
+.back {
+  position: fixed;
+  top: 1em;
+  left: 0;
+  padding: 0 5em 0 .8em;
+  @include adjust-font-size-to(16px, 2);
+  background: rgba(black,.7);
+  @include background( linear-gradient( to right, rgba(black,.7) 50%, rgba(black,0)  ) );
+  color: $color-green;
+  font-weight: bold;
+  &:hover, &:active {
+    background: rgba(white,.7);
+    @include background( linear-gradient( to right, rgba(white,.7) 50%, rgba(white,0)  ) );
+  }
+}
+
+.sub-header {
+  @extend %din;
+  @extend %h1;
+  @include leader(2.5);
+  @include at-breakpoint($desktop) {
+    @include leader(4.5);
+  }
+}
+
 hr {
   display: block;
   border: none;
-  border-top: 1px solid darken($background-gray, 60%);
-  width: 70%;
+  border-top: 1px solid darken($background-gray, 30%);
+  width: 60%;
   // margin: 0 auto;
   margin-left: 0;
   @include trailer(3);

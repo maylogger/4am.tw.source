@@ -19,8 +19,8 @@ $background-black: #111;
 $global-color: $color-gray;
 $global-muted-color: lighten($global-color, 50%);
 
-$global-link-color: $color-green;
-$global-link-hover-color: darken($color-blue, 20%);
+$global-link-color: $color-gray;
+$global-link-hover-color: $background-black;
 
 // background & border
 $global-background: white;
