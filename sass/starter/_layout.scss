@@ -42,26 +42,22 @@ $off-canvas-main-bg-color: white;
 .menu {
   position: absolute;
   top: 0px;
-  left: 0;
+  left: -$off-canvas-menu-width;
   z-index: 200;
   height: 100%;
-  // background-color: white;
   width: 100%;
 }
 
 .menu-inner {
   height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .main {
   background-color: $background-gray; //測試用
   position: relative;
   z-index: 100;
-  top: 0;
-  right: 0;
-  // background-color: $off-canvas-main-bg-color;
-  @include transition(transform .3s ease-out, max-width .5s);
-  @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
 }
 .main-inner {
   padding: 0 $gutter-width;
@@ -78,24 +74,24 @@ $off-canvas-main-bg-color: white;
     overflow: hidden;
   }
 
+  .menu {
+    left: 0;
+  }
   .menu-inner {
-    -webkit-overflow-scrolling: touch;
+
   }
 
   .main {
     height: 100%;
-    // overflow: auto; 目前無 javascript 控制，暫時取消滾動。
     overflow: hidden;
-    @include translateX($off-canvas-menu-width);
   }
 
 }
 
 
 @include at-breakpoint($pad) {
-  $off-canvas-menu-width: 8;
   .menu {
-    width: columns($off-canvas-menu-width);
+
   }
   .main {
 
@@ -106,7 +102,6 @@ $off-canvas-main-bg-color: white;
 
     }
     .main {
-      @include translateX( space($off-canvas-menu-width, $total_columns) );
     }
   }
 
@@ -117,6 +112,8 @@ $off-canvas-main-bg-color: white;
   $off-canvas-menu-width: 3;
   .menu {
     position: fixed;
+    left: 0;
+    right: auto;
     width: columns($off-canvas-menu-width);
     @media (max-height: 620px) {
       position: static;
@@ -132,13 +129,14 @@ $off-canvas-main-bg-color: white;
     .page {
       overflow: visible;
     }
+    .menu {
+    }
     .menu-inner {
       overflow: visible;
     }
     .main {
       height: auto;
       overflow: visible;
-      @include translateX( 0 );
     }
   }
 
