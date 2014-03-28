@@ -1,5 +1,8 @@
 .video-item-group {
   @include padding-leader(.5);
+  @include at-breakpoint($desktop) {
+    padding-top: 0;
+  }
 }
 .video-item {
   @include trailer(2);
