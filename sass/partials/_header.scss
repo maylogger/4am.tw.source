@@ -4,6 +4,7 @@
   @include pie-clearfix;
   height: 90%;
   min-height: 400px;
+  @include padding-leader(.5);
   @include at-breakpoint($pad) {
     height: 95%;
   }
@@ -26,7 +27,6 @@
       padding-top: 15%;
     }
     // style
-    @include leader(.5);
     @include trailer(.5);
     width: 80%;
     margin-left: 6px;
@@ -91,7 +91,8 @@
       width: 400px;
     }
     @include at-breakpoint($desktop) {
-      width: 400px;
+      width: 350px;
+      left: -.7em;
     }
   }
 }
@@ -99,6 +100,7 @@
 .menu-list {
   @include reset-box-model;
   @include reset-list-style;
+  @include trailer(2);
   li {
     border-top: 1px solid #ccc;
     background: $background-gray;
@@ -118,7 +120,11 @@
   }
   @include at-breakpoint($desktop) {
     li { background: transparent; border: none }
-    a { color: $color-gray; @include transition(background-color, 1s) }
+    a {
+      @include adjust-font-size-to(16px);
+      color: $color-gray;
+      @include transition(background-color, 1s)
+    }
     a:after { color: $color-gray; }
     a:hover { background: rgba($background-gray,.3); }
   }
