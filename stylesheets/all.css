@@ -258,14 +258,14 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 .photo-item-group { padding-top: 12px; }
 @media (min-width: 940px) { .photo-item-group { padding-top: 0; } }
 
-.photo-item { margin-bottom: 48px; text-align: center; }
+.photo-item { margin-bottom: 48px; text-align: left; }
 .photo-item .photo img { margin: 0 auto; }
 .photo-item .text { font-size: 15px; line-height: 24px; }
 
 .video-item-group { padding-top: 12px; }
 @media (min-width: 940px) { .video-item-group { padding-top: 0; } }
 
-.video-item { margin-bottom: 48px; text-align: center; }
+.video-item { margin-bottom: 48px; text-align: left; }
 .video-item .video { margin-bottom: 6px; position: relative; width: 100%; height: 0; padding-top: 56.25%; }
 .video-item .video iframe, .video-item .video video { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; }
 .video-item .text { font-size: 15px; line-height: 24px; }

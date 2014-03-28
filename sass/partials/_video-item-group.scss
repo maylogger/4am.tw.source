@@ -6,7 +6,7 @@
 }
 .video-item {
   @include trailer(2);
-  text-align: center;
+  text-align: left;
   .video {
     @include trailer(.25);
     position: relative;
