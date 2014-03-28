@@ -1,4 +1,5 @@
 @mixin replace-text-with-svg($image-name) {
   @include replace-text-with-dimensions("#{$image-name}.png");
   background-image: none, image-url("#{$image-name}.svg");
+  @include background-size(cover);
 }
