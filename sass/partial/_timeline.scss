@@ -12,34 +12,43 @@
 }
 .timeline-item {
   @include pie-clearfix;
+  position: relative;
   @include trailer(1);
   color: $global-color;
   padding-left: 26px;
   .date {
-    position: absolute;
-    left: -23px;
-    border: 1px solid $global-color;
-    padding: 0 6px;
-    @include adjust-font-size-to(15px);
+    @include adjust-font-size-to(20px);
     font-weight: bold;
     background-color: $background-gray;
     color:$global-color;
-    line-height: $base-line-height - 4px;
-  }
-  .title {
-    float: left;
-    padding-left: 12px;
-    @include adjust-font-size-to(20px);
-  }
-  .time {
     &:before {
+      $dot-size: 12px;
       content: '';
       position: absolute;
       border: 6px solid $background-gray;
-      width: 8px;
-      height: 8px;
+      width: $dot-size;
+      height: $dot-size;
       background-color: $global-color;
-      left: -9px;
+      left: -11px;
+      @include border-radius(20px);
+    }
+  }
+  .title {
+    float: left;
+    @include adjust-font-size-to(20px);
+    font-weight: bold;
+  }
+  .time {
+    $dot-size: 8px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      border: 4px solid $background-gray;
+      width: $dot-size;
+      height: $dot-size;
+      background-color: $global-color;
+      left: -7px;
       @include border-radius(20px);
     }
   }
@@ -55,6 +64,10 @@
     }
   }
   @include at-breakpoint($pad) {
+    padding-left: 20px;
+    .date {
+      float: left;
+    }
     .title {
       padding-left: 0;
     }
