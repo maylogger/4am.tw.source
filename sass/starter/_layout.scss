@@ -56,7 +56,8 @@ $off-canvas-main-bg-color: white;
 }
 
 .main {
-  background-color: $background-gray; //測試用
+  @include padding-leader(1);
+  background-color: $background-black; //測試用
   position: relative;
   z-index: 100;
 }
@@ -110,6 +111,9 @@ $off-canvas-main-bg-color: white;
 
 @include at-breakpoint($desktop) {
   $off-canvas-menu-width: 3;
+  .off-canvas-toggle-btn {
+    display: none;
+  }
   .menu {
     position: fixed;
     left: 0;
@@ -125,6 +129,7 @@ $off-canvas-main-bg-color: white;
     overflow: visible;
   }
   .main {
+    padding-top: 6.5%;
     display: block;
     @include span-columns( ( $total_columns - $off-canvas-menu-width ) omega, $total_columns);
   }
