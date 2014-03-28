@@ -150,11 +150,11 @@ html, body { background: #111111; height: 100%; }
 @media (min-width: 940px) { .toggle-menu-btn, .back { display: none; }
   .menu { position: fixed; left: 0; right: auto; width: 23.40426%; float: left; margin-right: 2.12766%; }
   .menu-inner { height: auto; overflow: visible; }
-  .main { padding-top: 144px; display: block; width: 74.46809%; float: right; margin-right: 0; }
+  .main { padding-top: 156px; display: block; width: 74.46809%; float: right; margin-right: 0; }
   .open-menu .page { overflow: visible; }
   .open-menu .menu-inner { overflow: visible; }
   .open-menu .main { display: block; } }
-@media (min-width: 940px) and (max-height: 620px) { .menu { position: static; } }
+@media (min-width: 940px) and (max-height: 620px) { .menu { position: relative; } }
 
 .timeline-item .date, .timeline-item .title, .timeline-item .time { font-family: "DINAlternate-Bold", "Impact", "Arial", sans-serif; font-weight: bold; }
 
@@ -252,4 +252,4 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
   .menu-list li { background: transparent; border: none; }
   .menu-list a { font-size: 16px; line-height: 24px; color: #e4e4e3; -webkit-transition: background-color 1s; -moz-transition: background-color 1s; -o-transition: background-color 1s; transition: background-color 1s; }
   .menu-list a:after { position: relative; top: -.1em; color: #e4e4e3; }
-  .menu-list a:hover { background: rgba(220, 221, 222, 0.3); } }
+  .menu-list a:hover, .menu-list a.active { background: rgba(220, 221, 222, 0.3); } }

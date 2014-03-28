@@ -151,7 +151,7 @@ $off-canvas-main-bg-color: white;
     // width: columns($off-canvas-menu-width);
     @include span-columns($off-canvas-menu-width);
     @media (max-height: 620px) {
-      position: static;
+      position: relative;
     }
   }
   .menu-inner {
@@ -159,7 +159,7 @@ $off-canvas-main-bg-color: white;
     overflow: visible;
   }
   .main {
-    @include padding-leader(6);
+    @include padding-leader(6.5);
     display: block;
     @include span-columns( ( $total_columns - $off-canvas-menu-width ) omega, $total_columns);
   }

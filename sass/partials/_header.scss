@@ -130,6 +130,6 @@
       top: -.1em;
       color: $color-gray;
     }
-    a:hover { background: rgba($background-gray,.3); }
+    a:hover, a.active { background: rgba($background-gray,.3); }
   }
 }
