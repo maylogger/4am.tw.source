@@ -1,0 +1,7 @@
+.header {
+  .logo {
+    @include adjust-font-size-to(20px);
+    em { font-style: normal; }
+    a {}
+  }
+}

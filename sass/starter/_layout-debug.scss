@@ -1,5 +1,6 @@
 /* debug background grid */
 body {
+  background: none, black;
   @include baseline-grid-background;
 }
 #{$page-container} {

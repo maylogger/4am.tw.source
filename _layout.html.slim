@@ -7,12 +7,7 @@ html lang="zh-TW" class="no-js"
     .page
       .menu
         .menu-inner#scrollable
-          ul.main-nav
-            - 10.times do
-              li: a href="/#" Demo
-              li: a href="/#" Shop
-              li: a href="/#" Protfolio
-              li: a href="/#" Contact
+          = render "/partials/header"
       .main
         .main-inner
           button.off-canvas-toggle-btn back
