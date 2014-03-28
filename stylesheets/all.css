@@ -303,7 +303,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .press-item { margin-bottom: 60px; }
 .press-item:after { content: ""; display: table; clear: both; }
 @media (min-width: 800px) { .press-item { margin-bottom: 72px; } }
-.press-item blockquote { margin-bottom: 12px; font-size: 15px; line-height: 24px; border-left: 2px solid #80807b; }
+.press-item blockquote { margin-bottom: 12px; font-size: 15px; line-height: 24px; padding-left: 0; border-left: none; }
 .press-item cite { text-align: right; float: right; font-size: 13px; line-height: 19px; }
 .press-item cite:before { content: ''; position: relative; top: -3px; display: inline-block; height: 1px; width: 12px; background-color: #999; margin-right: 8px; }
 .press-item cite a { color: #999999; }
