@@ -1,9 +1,23 @@
+-videos = [\
+  OpenStruct.new( :description => '親愛的長輩們\n30年前你們守護我們\n現在換我們守護台灣', :url => '//www.youtube.com/embed/fKU7A22usls'),\
+  OpenStruct.new( :description => '"Stop and see/listen. we all standing right here,together.\nPray for Taiwan."', :url => '//www.youtube.com/embed/ddUyfAJXT1g'),\
+  OpenStruct.new( :description => '', :url => '//www.youtube.com/embed/pkJkz_s0ZZ8'),\
+  OpenStruct.new( :description => 'Students were beaten by angry police at the Administrative Yuan on March 24, 2014, after five days of ongoing rallies since they had occupied the Legislature Yuan.', :url => '//www.youtube.com/embed/7NaMM97kh-I'),\
+  OpenStruct.new( :description => "On March 18, thousands of Taiwanese students occupied Taiwan's Legislative Yuan. A few days later, hundreds more took the Executive Yuan, before police violently evicted them, even going so far as using water cannons. They call themselves the Sunflower Revolution. Taiwanese President Ma Ying-jeou has pushed forward a trade deal with China called the Trade in Services Agreement that many in Taiwan feel will give the Chinese Communist Party control over the island, eroding away their hard won democracy, freedoms, and human rights. But Ma sees it as vital to maintain Taiwan's competitive edge in the international market and if they go back on the agreement, it will damage their credibility as a trading partner. But with the CCP gradually encroaching on Hong Kong using similar economic soft power, will Taiwan be next? Find out on this episode of China Uncensored.", :url => '//www.youtube.com/embed/WF44bx8SF54'),\
+  OpenStruct.new( :description => '', :url => '//www.youtube.com/embed/dY2YT2hSoGA'),\
+  OpenStruct.new( :description => "For the first time in history, the Taiwan parliament was stormed by students protesting the cross-strait trade agreement service with China that, if ratified, would allow service-sector companies in Taiwan and China to set up branches and retail operations in each other's territory.", :url => '//www.youtube.com/embed/9x9H0SzqraI'),\
+  OpenStruct.new( :description => '', :url => '//www.youtube.com/embed/o2XyhLbWKOw'),\
+  OpenStruct.new( :description => '', :url => '//www.youtube.com/embed/DnN_pvPcWyc'),\
+  OpenStruct.new( :description => 'A compilation video clip on police brutality on students/protesters in Taiwan', :url => '//www.youtube.com/embed/fIQp3kNPmhc'),\
+  OpenStruct.new( :description => '', :url => '//www.youtube.com/embed/1wPWIIZyRb0')\
+  ]
+
 h2.sub-header Videos
 
 .video-item-group
-  - 10.times do
+  - videos.each do | video |
     .video-item
       .video
-        iframe width="420" height="315" src="//www.youtube.com/embed/aen8577gnVo" frameborder="0" allowfullscreen
-      p.text= lorem_sentences(2)
+        iframe width="420" height="315" src="#{video.url}" frameborder="0" allowfullscreen
+      p.text= video.description.gsub('\n',"<br/>")
 
