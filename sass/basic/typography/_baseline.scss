@@ -1,0 +1,19 @@
+$baseline-position: .1 !default;
+@mixin move-to-baseline( $font-size, $line: lines-for-font-size($font-size), $top: false ) {
+  position: relative;
+  $move:  round( ( $base-line-height * $line - $font-size ) / 2 + floor( $font-size * $baseline-position ) );
+  @if $top == top {
+    top: - $move;
+  } @else {
+    top: $move;
+  }
+}
+
+@mixin baseline-font-size( $font-size, $line: lines-for-font-size($font-size), $top: false ) {
+  @include adjust-font-size-to($font-size, $line);
+  @include move-to-baseline($font-size, $line, $top);
+}
+
+@mixin remove-move-to-baseline {
+  top: 0;
+}
