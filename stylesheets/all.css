@@ -139,14 +139,14 @@ html, body { height: 100%; }
 .page { height: 100%; position: relative; }
 @media (min-width: 940px) { .page { height: auto; } }
 
-.menu { position: absolute; top: 0px; left: 0; z-index: 10; height: 100%; width: 100%; }
+.menu { position: absolute; top: 0px; left: 0; z-index: 200; height: 100%; width: 100%; }
 
 .main { position: relative; z-index: 100; top: 0; right: 0; -webkit-transition: -webkit-transform 0.3s ease-out, max-width 0.5s; -moz-transition: -moz-transform 0.3s ease-out, max-width 0.5s; -o-transition: -o-transform 0.3s ease-out, max-width 0.5s; transition: transform 0.3s ease-out, max-width 0.5s; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; }
 
-.main-inner { padding: 0 24px; }
+.main-inner { padding: 0 24px; height: 100%; overflow: auto; }
 
 .open-menu .page { height: 100%; overflow: hidden; }
-.open-menu .menu-inner { height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
+.open-menu .menu-inner { -webkit-overflow-scrolling: touch; }
 .open-menu .main { height: 100%; overflow: hidden; -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -ms-transform: translateX(100%); -o-transform: translateX(100%); transform: translateX(100%); }
 
 @media (min-width: 480px) { .menu { width: 100%; }
@@ -215,18 +215,25 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 
 .timeline { position: relative; }
 
-.timeline-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: white; z-index: -1; }
+.timeline-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: #444444; z-index: -1; }
 
-.timeline-item { margin-bottom: 24px; }
+.timeline-item { margin-bottom: 24px; color: #444444; padding-left: 26px; }
 .timeline-item:after { content: ""; display: table; clear: both; }
-.timeline-item .date { border: 1px solid white; padding: 0 6px; font-size: 13px; line-height: 24px; background-color: black; color: white; line-height: 22px; }
-.timeline-item .title { float: left; font-size: 20px; line-height: 24px; }
-.timeline-item .time:before { content: ''; position: absolute; border: 6px solid black; width: 8px; height: 8px; background-color: white; left: -9px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.timeline-item .date { position: absolute; left: -23px; border: 1px solid #444444; padding: 0 6px; font-size: 15px; line-height: 24px; font-weight: bold; background-color: #dcddde; color: #444444; line-height: 20px; }
+.timeline-item .title { float: left; padding-left: 12px; font-size: 20px; line-height: 24px; }
+.timeline-item .time:before { content: ''; position: absolute; border: 6px solid #dcddde; width: 8px; height: 8px; background-color: #444444; left: -9px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.timeline-item .text { color: #1e1e1e; font-size: 15px; line-height: 24px; }
+.timeline-item .image { margin-bottom: 24px; }
+.timeline-item .image img { display: block; margin-bottom: 0px; }
+@media (min-width: 480px) { .timeline-item .title { padding-left: 0; }
+  .timeline-item .time { float: left; } }
 
-.header { background: #111; position: relative; height: 90%; }
+@media (min-width: 480px) { .timeline-item-content { width: 87.09677%; float: right; margin-right: 0; } }
+
+.header { background: #111; position: relative; height: 90%; min-height: 400px; }
 .header:after { content: ""; display: table; clear: both; }
 @media (min-width: 480px) { .header { height: 95%; } }
-@media (min-width: 940px) { .header { background: transparent; position: static; } }
+@media (min-width: 940px) { .header { background: transparent; position: static; min-height: 0; } }
 .header .logo { font-size: 28px; line-height: 48px; margin-top: 12px; margin-bottom: 12px; width: 80%; margin-left: 6px; }
 .header .logo em { font-style: normal; display: block; }
 .header .logo a { color: #e4e4e3; display: block; }
@@ -234,16 +241,21 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 @media (min-width: 940px) { .header .logo { width: 125%; } }
 .header img { margin: 0; padding: 0; border: 0; width: 40.66667%; position: absolute; bottom: 15%; right: 0; margin-bottom: 24px; opacity: .75; }
 @media (min-width: 480px) { .header img { width: 22.58065%; } }
-@media (min-width: 940px) { .header img { position: static; width: 50%; float: right; margin-top: 72px; } }
+@media (min-width: 940px) { .header img { position: static; width: 50%; margin-top: 72px; } }
 .header .story { font-size: 16px; line-height: 24px; position: absolute; bottom: 15%; left: 59.33333%; color: #e4e4e3; }
 .header .story:after { content: " →"; }
 @media (min-width: 480px) { .header .story { left: 77.41935%; } }
 @media (min-width: 940px) { .header .story { display: none; } }
-.header .slogan { position: absolute; bottom: 0; clear: both; font-size: 13px; line-height: 24px; color: #e4e4e3; width: 85%; }
+.header .slogan { position: absolute; bottom: 0; z-index: 1000; clear: both; font-size: 13px; line-height: 24px; color: #e4e4e3; width: 85%; }
 .header .slogan p { margin: 0; padding: 0; border: 0; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/slogan.png?1395979084'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/slogan.svg?1395979092'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
 @media (min-width: 480px) { .header .slogan { width: 400px; } }
+@media (min-width: 940px) { .header .slogan { width: 400px; } }
 
 .menu-list { margin: 0; padding: 0; border: 0; list-style: none; }
 .menu-list li { border-top: 1px solid #ccc; background: #dcddde; }
-.menu-list a { font-size: 18px; line-height: 24px; display: block; color: #444; padding: .7em 1em; }
+.menu-list a { font-size: 18px; line-height: 24px; display: block; color: #444; padding: .7em .89em; }
 .menu-list a:after { font-size: 20px; line-height: 24px; content: " ›"; color: #999; color: rgba(0, 0, 0, 0.3); float: right; }
+@media (min-width: 940px) { .menu-list li { background: transparent; border: none; }
+  .menu-list a { color: #e4e4e3; -webkit-transition: background-color, 1s; -moz-transition: background-color, 1s; -o-transition: background-color, 1s; transition: background-color, 1s; }
+  .menu-list a:after { color: #e4e4e3; }
+  .menu-list a:hover { background: rgba(220, 221, 222, 0.3); } }

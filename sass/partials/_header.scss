@@ -3,12 +3,14 @@
   position: relative;
   @include pie-clearfix;
   height: 90%;
+  min-height: 400px;
   @include at-breakpoint($pad) {
     height: 95%;
   }
   @include at-breakpoint($desktop) {
     background: transparent;
     position: static;
+    min-height: 0;
   }
   .logo {
     // normal style
@@ -46,7 +48,7 @@
     @include at-breakpoint($desktop) {
       position: static;
       width: columns(1.5, 3);
-      float: right;
+      // float: right;
       @include leader(3);
     }
   }
@@ -69,6 +71,7 @@
   .slogan {
     position: absolute;
     bottom: 0;
+    z-index: 1000;
     // clear float first
     clear: both;
     // normal style
@@ -87,6 +90,9 @@
     @include at-breakpoint($pad) {
       width: 400px;
     }
+    @include at-breakpoint($desktop) {
+      width: 400px;
+    }
   }
 }
 
@@ -101,7 +107,7 @@
     @include adjust-font-size-to(18px);
     display: block;
     color: #444;
-    padding: .7em 1em;
+    padding: .7em .89em;
     &:after {
       @include adjust-font-size-to(20px, 1);
       content: " ›";
@@ -109,5 +115,11 @@
       color: rgba(black,.3);
       float: right;
     }
+  }
+  @include at-breakpoint($desktop) {
+    li { background: transparent; border: none }
+    a { color: $color-gray; @include transition(background-color, 1s) }
+    a:after { color: $color-gray; }
+    a:hover { background: rgba($background-gray,.3); }
   }
 }
