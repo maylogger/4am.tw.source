@@ -282,7 +282,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .timeline-item .image { margin-bottom: 24px; position: relative; padding-top: 75%; }
 .timeline-item .image img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; margin-bottom: 0px; }
 @media (min-width: 800px) { .timeline-item { padding-left: 20px; }
-  .timeline-item .date { float: left; }
+  .timeline-item .date { float: left; padding-right: 3em; }
   .timeline-item .title { padding-left: 0; }
   .timeline-item .time { float: left; } }
 
