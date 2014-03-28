@@ -197,6 +197,8 @@ em, i { font-family: monospace; font-style: normal; letter-spacing: 1px; color: 
 
 strong, b { color: white; }
 
+abbr { cursor: help; }
+
 blockquote { margin: 0; padding: 0; border: 0; margin-top: 24px; margin-bottom: 24px; border-left: 3px solid #f0f2f0; padding-left: 24px; font-size: 16px; line-height: 24px; }
 blockquote cite { display: block; color: white; }
 blockquote cite:before { content: '\2014 \00A0'; }
@@ -216,6 +218,8 @@ a img { border: none; }
 
 img { max-width: 100%; margin-bottom: 24px; }
 
+.main a { text-decoration: underline; }
+
 .logo a { display: block; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/logo.png?1395979084'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/logo.svg?1395979092'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
 
 .slogan p { margin: 0; padding: 0; border: 0; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/slogan.png?1395979084'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/slogan.svg?1395979092'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
@@ -232,7 +236,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 800px) { .header .logo { width: 125%; } }
 .header img { cursor: pointer; display: block; margin: 0; padding: 0; border: 0; width: 40.66667%; position: absolute; bottom: 15%; right: 0; opacity: .75; }
 @media (min-width: 480px) { .header img { width: 22.58065%; } }
-@media (min-width: 800px) { .header img { position: static; width: 41.81818%; margin-top: 72px; } }
+@media (min-width: 800px) { .header img { cursor: default; position: static; width: 41.81818%; margin-top: 72px; } }
 .header a.story { font-size: 16px; line-height: 24px; position: absolute; bottom: 15%; right: 41.81818%; color: #e4e4e3; padding-right: .5em; }
 .header a.story:after { content: " →"; }
 @media (min-width: 480px) { .header a.story { right: 22.58065%; } }
@@ -244,13 +248,17 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .menu-list { margin: 0; padding: 0; border: 0; list-style: none; }
 .menu-list li { border-top: 1px solid #ccc; background: #dcddde; }
-.menu-list a { font-size: 18px; line-height: 24px; display: block; color: #444; padding: .7em .89em; }
+.menu-list a { font-size: 18px; line-height: 24px; display: block; color: #444; padding: .4em 15px; }
 .menu-list a:after { font-size: 20px; line-height: 24px; content: " ›"; color: #999; color: rgba(0, 0, 0, 0.3); float: right; }
 @media (min-width: 800px) { .menu-list { margin-bottom: 48px; }
   .menu-list li { background: transparent; border: none; }
   .menu-list a { font-size: 16px; line-height: 24px; color: #e4e4e3; -webkit-transition: background-color 1s; -moz-transition: background-color 1s; -o-transition: background-color 1s; transition: background-color 1s; }
   .menu-list a:after { position: relative; top: -.1em; color: #e4e4e3; }
   .menu-list a:hover, .menu-list a.active { background: rgba(220, 221, 222, 0.3); } }
+.menu-list .social { margin: 0; padding: 0; border: 0; list-style: none; margin-top: 24px; }
+.menu-list .social h2 { margin: 0; padding: 0; border: 0; font-weight: normal; padding: 0 15px; font-size: 12px; line-height: 24px; }
+.menu-list .social li { width: 50%; float: left; }
+.menu-list .social a:after { float: none; top: 0; }
 
 .timeline { position: relative; width: 97%; float: right; }
 @media (min-width: 480px) { .timeline { float: none; width: 95%; margin: 0 auto; } }
@@ -288,6 +296,6 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 800px) { .video-item-group { padding-top: 0; } }
 
 .video-item { margin-bottom: 48px; text-align: left; }
-.video-item .video { margin-bottom: 6px; position: relative; width: 100%; height: 0; padding-top: 56.25%; }
+.video-item .video { margin-bottom: 6px; position: relative; width: 100%; height: 0; padding-top: 56.25%; background: #444; }
 .video-item .video iframe, .video-item .video video { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; }
 .video-item .text { font-size: 15px; line-height: 24px; }

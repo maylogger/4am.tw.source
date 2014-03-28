@@ -118,6 +118,10 @@ strong, b {
   color: white;
 }
 
+abbr {
+  cursor: help;
+}
+
 // 引用他處文獻
 blockquote {
   @include reset-box-model;
@@ -190,5 +194,6 @@ img {
 .main {
   a {
     @extend %din;
+    text-decoration: underline;
   }
 }
