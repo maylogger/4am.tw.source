@@ -14,10 +14,11 @@ $desktop-break    : 940px;
 $desktop: $desktop-break $desktop-columns;
 
 // debug
-@import "layout-debug";
+// @import "layout-debug";
 
 
 html, body {
+  background: $background-black;
   height: 100%;
   @include at-breakpoint($desktop) {
     height: auto;
