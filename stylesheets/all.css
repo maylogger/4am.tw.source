@@ -210,3 +210,11 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 .page-change-animation.ng-leave { -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); position: absolute; top: 0; left: 0; right: 0; z-index: 10; }
 
 .page-change-animation.ng-leave.ng-leave-active { -webkit-transform: translateX(-10%); -moz-transform: translateX(-10%); -ms-transform: translateX(-10%); -o-transform: translateX(-10%); transform: translateX(-10%); }
+
+.timeline { position: relative; }
+
+.timeline-bar { position: absolute; top: 0; bottom: 0; width: 2px; background-color: black; }
+
+.timeline-item { position: relative; }
+.timeline-item .date { border: 1px solid black; }
+.timeline-item .title { font-size: 20px; line-height: 24px; }

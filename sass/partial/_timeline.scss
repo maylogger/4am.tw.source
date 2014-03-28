@@ -1,0 +1,30 @@
+.timeline {
+  position: relative;
+}
+.timeline-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: black;
+}
+.timeline-item {
+  position: relative;
+  .date {
+    border: 1px solid black;
+
+  }
+  .title {
+    @include adjust-font-size-to(20px);
+  }
+  .time {
+
+  }
+  .text {
+
+  }
+  .image {
+
+  }
+}
+
