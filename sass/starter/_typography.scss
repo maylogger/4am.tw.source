@@ -57,7 +57,7 @@ h6 {
   @include reset-box-model;
 }
 
-.back {
+.main .back {
   @extend %futura;
   position: fixed;
   z-index: 3000;
@@ -68,6 +68,7 @@ h6 {
   background: rgba(black,.7);
   @include background( linear-gradient( to right, rgba(black,.7) 50%, rgba(black,0)  ) );
   color: white;
+  text-decoration: none;
   &:hover, &:active {
     color: black;
     text-decoration: none;
