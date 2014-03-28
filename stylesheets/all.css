@@ -164,7 +164,7 @@ html, body { background: #111111; height: 100%; }
 
 .main .back, .header .logo, .header .slogan { font-family: "Futura", "Futura-Medium","Arial", sans-serif; font-weight: normal; }
 
-body { font-family: "PalatinoLinotype-Roman", "Palatino-Roman", "TimesNewRomanPSMT", "Times", serif; }
+body { font-family: "Palatino Linotype", "PalatinoLinotype-Roman", "Palatino-Roman", "TimesNewRomanPSMT", "Times", serif; }
 
 body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: #e4e4e3; }
 
