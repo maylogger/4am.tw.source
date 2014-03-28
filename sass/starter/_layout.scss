@@ -91,7 +91,7 @@ $off-canvas-main-bg-color: white;
 .main-inner {
   position: relative;
   z-index: 110;
-  padding: 0 $gutter-width;
+  padding: 0 $gutter-width 10em;
   height: 100%;
   overflow: auto;
   max-width: 800px;
