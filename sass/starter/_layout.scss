@@ -5,7 +5,7 @@ $gutter-width   : 24px;
 $grid-padding   : 0;
 
 // add media
-$pad-columns  : 6;
+$pad-columns  : 8;
 $pad-break    : 480px;
 $pad: $pad-break $pad-columns;
 
@@ -19,6 +19,9 @@ $desktop: $desktop-break $desktop-columns;
 
 html, body {
   height: 100%;
+  @include at-breakpoint($desktop) {
+    height: auto;
+  }
 }
 
 #{$page-container} {
@@ -27,8 +30,11 @@ html, body {
 }
 
 .page {
-  min-height: 100%;
+  height: 100%;
   position: relative;
+  @include at-breakpoint($desktop) {
+    height: auto;
+  }
 }
 
 $off-canvas-menu-width: 100%;
@@ -82,9 +88,9 @@ $off-canvas-main-bg-color: white;
 
 
 @include at-breakpoint($pad) {
-  $off-canvas-menu-width: 3;
+  $off-canvas-menu-width: 8;
   .menu {
-    width: columns($off-canvas-menu-width) + gutter($total_columns);
+    width: columns($off-canvas-menu-width);
   }
   .main {
 
@@ -106,7 +112,7 @@ $off-canvas-main-bg-color: white;
   $off-canvas-menu-width: 3;
   .menu {
     position: fixed;
-    width: columns($off-canvas-menu-width) + gutter($total_columns);
+    width: columns($off-canvas-menu-width);
   }
   .main {
     @include span-columns( ( $total_columns - $off-canvas-menu-width ) omega, $total_columns);
