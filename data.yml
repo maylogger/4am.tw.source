@@ -1,8 +1,12 @@
 site-url: "http://localhost:3000"
-site-title: "未命名頁面"
-site-name: "未命名網站"
-site-description: "尚未填寫敘述"
+site-title: "Democracy at 4am : What unprecedented protest means for Taiwan."
+site-name: "4am.tw"
+site-description: "To defend the hard-earned democracy.
+We occupied the Legistlative Yuan of ROC, peacefully and rationally,
+Since 2014-03-19, tens of thousands citizens have joined us.
+Taiwan needs your attention and support. Today, we ask you to join us,
+in support of basic democratic values."
 
 og-type: "website"
-og-image: "http://localhost:3000/fb.png"
+og-image: "http://localhost:3000/4amtw.jpg"
 fb-admins: "123456"
