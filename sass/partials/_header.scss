@@ -44,7 +44,7 @@
     bottom: 15%;
     right: 0;
     opacity: .75;
-    @include trailer(1);
+    // @include trailer(1);
     @include at-breakpoint($pad) {
       width: columns(2);
     }
@@ -59,13 +59,14 @@
     @include adjust-font-size-to(16px);
     position: absolute;
     bottom: 15%;
-    left: columns(2.3);
+    right: columns(1.2, 3);
     color: $color-gray;
+    padding-right: .5em;
     &:after {
       content: " →";
     }
     @include at-breakpoint($pad) {
-      left: columns(6) + gutter(8);
+      right: columns(2, 8);
     }
     @include at-breakpoint($desktop) {
       display: none;
