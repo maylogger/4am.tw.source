@@ -123,9 +123,13 @@
     a {
       @include adjust-font-size-to(16px);
       color: $color-gray;
-      @include transition(background-color, 1s)
+      @include transition(background-color 1s)
     }
-    a:after { color: $color-gray; }
+    a:after {
+      position: relative;
+      top: -.1em;
+      color: $color-gray;
+    }
     a:hover { background: rgba($background-gray,.3); }
   }
 }

@@ -60,11 +60,41 @@ $off-canvas-main-bg-color: white;
   background-color: $background-black; //測試用
   position: relative;
   z-index: 100;
+  &:after,
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: red;
+    z-index: 200;
+    pointer-events: none;
+  }
+  &:before {
+    bottom: auto;
+    @include background(
+      linear-gradient( to bottom, rgba($background-black,.25), rgba($background-black,.125), rgba($background-black,.042), rgba($background-black,0) )
+      );
+  }
+  &:after {
+    top: auto;
+    @include background(
+      linear-gradient( to top, rgba($background-black,.25), rgba($background-black,.125), rgba($background-black,.042), rgba($background-black,0) )
+      );
+  }
 }
 .main-inner {
+  position: relative;
+  z-index: 110;
   padding: 0 $gutter-width;
   height: 100%;
   overflow: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 
@@ -129,7 +159,7 @@ $off-canvas-main-bg-color: white;
     overflow: visible;
   }
   .main {
-    padding-top: 6.5%;
+    @include padding-leader(6);
     display: block;
     @include span-columns( ( $total_columns - $off-canvas-menu-width ) omega, $total_columns);
   }

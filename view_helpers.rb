@@ -11,7 +11,7 @@ module ViewHelpers
     if href == request.path.gsub('index.html', '')
       active = "active"
     end
-    content_tag(:li, link_to(name, href, options), :class => active )
+    content_tag(:li, link_to(name, href, :class => active) )
   end
 
 end

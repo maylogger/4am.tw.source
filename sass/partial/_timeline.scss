@@ -7,7 +7,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: darken($background-gray, 15%);
+  background-color: darken($background-gray, 60%);
   z-index: -1;
 }
 .timeline-item {
@@ -20,6 +20,7 @@
     @include padding-trailer(1);
   }
   .date {
+    @extend %din;
     @include adjust-font-size-to(20px);
     font-weight: bold;
     background-color: $background-black;
@@ -33,25 +34,28 @@
       height: $dot-size;
       background-color: $background-gray;
       left: -11px;
+      top: 0px;
       @include border-radius(20px);
     }
   }
   .title {
+    @extend %din;
     float: left;
     @include adjust-font-size-to(20px);
     font-weight: bold;
   }
   .time {
+    @extend %din;
     $dot-size: 8px;
     &:before {
       content: '';
       position: absolute;
-      top: 2px;
       border: 4px solid $background-black;
       width: $dot-size;
       height: $dot-size;
       background-color: $background-gray;
       left: -7px;
+      top: 4px;
       @include border-radius(20px);
     }
   }
