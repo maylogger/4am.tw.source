@@ -2,11 +2,11 @@
   background: #111;
   position: relative;
   @include pie-clearfix;
-  height: 90%;
+  height: 88.5%;
   min-height: 400px;
   @include padding-leader(.5);
   @include at-breakpoint($pad) {
-    height: 95%;
+    height: 93.5%;
   }
   @include at-breakpoint($desktop) {
     background: transparent;

@@ -229,9 +229,9 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 
 @media (min-width: 480px) { .timeline-item-content { width: 87.09677%; float: right; margin-right: 0; } }
 
-.header { background: #111; position: relative; height: 90%; min-height: 400px; padding-top: 12px; }
+.header { background: #111; position: relative; height: 88.5%; min-height: 400px; padding-top: 12px; }
 .header:after { content: ""; display: table; clear: both; }
-@media (min-width: 480px) { .header { height: 95%; } }
+@media (min-width: 480px) { .header { height: 93.5%; } }
 @media (min-width: 940px) { .header { background: transparent; position: static; min-height: 0; } }
 .header .logo { font-size: 28px; line-height: 48px; margin-bottom: 12px; width: 80%; margin-left: 6px; }
 .header .logo em { font-style: normal; display: block; }
