@@ -1,3 +1,6 @@
+.photo-item-group {
+  @include padding-leader(.5);
+}
 .photo-item {
   @include trailer(2);
   text-align: center;
@@ -9,7 +12,4 @@
   .text {
     @include adjust-font-size-to(15px);
   }
-
-
-
 }
