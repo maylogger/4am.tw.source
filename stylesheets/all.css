@@ -213,11 +213,13 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 
 .timeline { position: relative; }
 
-.timeline-bar { position: absolute; top: 0; bottom: 0; width: 2px; background-color: black; }
+.timeline-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: white; z-index: -1; }
 
-.timeline-item { position: relative; }
-.timeline-item .date { border: 1px solid black; }
-.timeline-item .title { font-size: 20px; line-height: 24px; }
+.timeline-item { margin-bottom: 24px; }
+.timeline-item:after { content: ""; display: table; clear: both; }
+.timeline-item .date { border: 1px solid white; padding: 0 6px; font-size: 13px; line-height: 24px; background-color: black; color: white; line-height: 22px; }
+.timeline-item .title { float: left; font-size: 20px; line-height: 24px; }
+.timeline-item .time:before { content: ''; position: absolute; border: 6px solid black; width: 8px; height: 8px; background-color: white; left: -9px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
 
 .header .logo { font-size: 20px; line-height: 24px; }
 .header .logo em { font-style: normal; }

@@ -3,22 +3,39 @@
 }
 .timeline-bar {
   position: absolute;
+  left: 0;
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: black;
+  background-color: white;
+  z-index: -1;
 }
 .timeline-item {
-  position: relative;
+  @include pie-clearfix;
+  @include trailer(1);
   .date {
-    border: 1px solid black;
-
+    border: 1px solid white;
+    padding: 0 6px;
+    @include adjust-font-size-to(13px);
+    background-color: black;
+    color:white;
+    line-height: $base-line-height - 2px;
   }
   .title {
+    float: left;
     @include adjust-font-size-to(20px);
   }
   .time {
-
+      &:before {
+      content: '';
+      position: absolute;
+      border: 6px solid black;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      left: -9px;
+      @include border-radius(20px);
+    }
   }
   .text {
 
