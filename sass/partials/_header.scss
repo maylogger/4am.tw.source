@@ -7,5 +7,8 @@
     a { color: $color-gray; }
     // replace text
     @include replace-text-with-svg("logo");
+    width: auto;
+    height: 0px;
+    padding-top: 15%;
   }
 }
