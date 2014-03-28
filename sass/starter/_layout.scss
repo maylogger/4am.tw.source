@@ -59,7 +59,6 @@ $off-canvas-main-bg-color: white;
 
 .main {
   @include padding-leader(1);
-  background-color: $background-black; //測試用
   position: relative;
   z-index: 100;
   &:after,
