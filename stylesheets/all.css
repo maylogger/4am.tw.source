@@ -248,13 +248,15 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .menu-list { margin: 0; padding: 0; border: 0; list-style: none; background: #dcddde; }
 .menu-list li { border-top: 1px solid #ccc; }
-.menu-list a { font-size: 18px; line-height: 24px; display: block; color: #444; padding: .4em 15px; }
+.menu-list a { color: inherit; text-decoration: inherit; cursor: inherit; font-size: 18px; line-height: 24px; display: block; color: #444; padding: .4em 15px; }
+.menu-list a:active, .menu-list a:focus { outline: none; }
 .menu-list a:after { font-size: 20px; line-height: 24px; content: " ›"; color: #999; color: rgba(0, 0, 0, 0.3); float: right; }
 @media (min-width: 800px) { .menu-list { margin-bottom: 48px; background: transparent; }
   .menu-list li { border: none; }
   .menu-list a { font-size: 16px; line-height: 24px; color: #e4e4e3; -webkit-transition: background-color 1s; -moz-transition: background-color 1s; -o-transition: background-color 1s; transition: background-color 1s; }
   .menu-list a:after { position: relative; top: -.1em; color: #e4e4e3; }
-  .menu-list a:hover, .menu-list a.active { background: rgba(220, 221, 222, 0.3); } }
+  .menu-list a:hover, .menu-list a.active { background: rgba(220, 221, 222, 0.3); }
+  .menu-list a.active { text-decoration: underline; } }
 .menu-list .social { overflow: hidden; background: #dcddde; margin: 0; padding: 0; border: 0; list-style: none; padding-top: 12px; }
 .menu-list .social h2 { background: #111111; margin: 0; padding: 0; border: 0; font-weight: normal; padding: 0 15px; font-size: 12px; line-height: 24px; }
 .menu-list .social li { width: 50%; float: left; }
