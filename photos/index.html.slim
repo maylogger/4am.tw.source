@@ -1,15 +1,13 @@
 - photos = []
 - 26.times do |i|
   - photos << "%03d" % (i+1)
-
 - dateCounts = [ 6, 4, 6, 4, 5, 7, 11, 6, 5, 4, 1 ]
 - dateCounts.each_with_index do | count, i |
   - count.times do | j |
     - photos << "t#{i}-#{j+1}"
 
 .photo-item-group
-  - photos.each do | photo |
+  - photos.each_with_index do | photo, i |
     .photo-item
       .photo: img.lazy data-original="/images/photos/#{photo}.jpg"
-      p.text= lorem_sentences(2)
-
+      p.text=data['photos'][photo]
