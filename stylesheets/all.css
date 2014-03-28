@@ -268,7 +268,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .timeline-item { position: relative; margin-bottom: 24px; color: #e4e4e3; padding-left: 26px; }
 .timeline-item:after { content: ""; display: table; clear: both; }
-.timeline-item:last-child:after { position: relative; content: ""; display: block; height: 48px; width: 2px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, #000000)); background: -webkit-linear-gradient(rgba(0, 0, 0, 0), #000000); background: -moz-linear-gradient(rgba(0, 0, 0, 0), #000000); background: -o-linear-gradient(rgba(0, 0, 0, 0), #000000); background: linear-gradient(rgba(0, 0, 0, 0), #000000); left: -26px; }
+.timeline-item:last-child:after { position: relative; content: ""; display: block; height: 48px; width: 2px; margin-bottom: -24px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, #000000)); background: -webkit-linear-gradient(rgba(0, 0, 0, 0), #000000); background: -moz-linear-gradient(rgba(0, 0, 0, 0), #000000); background: -o-linear-gradient(rgba(0, 0, 0, 0), #000000); background: linear-gradient(rgba(0, 0, 0, 0), #000000); left: -26px; }
 @media (min-width: 800px) { .timeline-item:last-child:after { left: -20px; } }
 @media (min-width: 800px) { .timeline-item { margin-bottom: 72px; } }
 .timeline-item.end { padding-bottom: 24px; }
