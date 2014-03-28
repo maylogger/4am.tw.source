@@ -251,12 +251,16 @@ img { max-width: 100%; margin-bottom: 24px; }
   .menu-list a:after { position: relative; top: -.1em; color: #e4e4e3; }
   .menu-list a:hover, .menu-list a.active { background: rgba(220, 221, 222, 0.3); } }
 
-.timeline { position: relative; }
+.timeline { position: relative; width: 97%; float: right; }
+@media (min-width: 480px) { .timeline { float: none; width: 95%; margin: 0 auto; } }
 
 .timeline-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: #424446; z-index: -1; }
 
 .timeline-item { position: relative; margin-bottom: 24px; color: #e4e4e3; padding-left: 26px; }
 .timeline-item:after { content: ""; display: table; clear: both; }
+.timeline-item:last-child:after { position: relative; content: ""; display: block; height: 48px; width: 2px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, #000000)); background: -webkit-linear-gradient(rgba(0, 0, 0, 0), #000000); background: -moz-linear-gradient(rgba(0, 0, 0, 0), #000000); background: -o-linear-gradient(rgba(0, 0, 0, 0), #000000); background: linear-gradient(rgba(0, 0, 0, 0), #000000); left: -26px; }
+@media (min-width: 940px) { .timeline-item:last-child:after { left: -20px; } }
+@media (min-width: 940px) { .timeline-item { margin-bottom: 72px; } }
 .timeline-item.end { padding-bottom: 24px; }
 .timeline-item .date { font-size: 20px; line-height: 24px; font-weight: bold; background-color: #111111; color: #e4e4e3; }
 .timeline-item .date:before { content: ''; position: absolute; border: 6px solid #111111; width: 12px; height: 12px; background-color: #dcddde; left: -11px; top: 0px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }

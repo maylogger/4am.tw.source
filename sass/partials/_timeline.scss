@@ -1,5 +1,13 @@
 .timeline {
   position: relative;
+  width: 97%;
+  float: right;
+  @include at-breakpoint($pad) {
+    float: none;
+    width: 95%;
+    margin: 0 auto;
+  }
+
 }
 .timeline-bar {
   position: absolute;
@@ -14,6 +22,23 @@
   @include pie-clearfix;
   position: relative;
   @include trailer(1);
+  &:last-child:after {
+    position: relative;
+    content: "";
+    display: block;
+    height: 48px;
+    width: 2px;
+    @include background(
+      linear-gradient( rgba(black,0), rgba(black,1) )
+      );
+    left: -26px;
+    @include at-breakpoint($desktop) {
+      left: -20px;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    @include trailer(3);
+  }
   color: $color-gray;
   padding-left: 26px;
   &.end {
