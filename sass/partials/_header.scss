@@ -35,19 +35,20 @@
     }
   }
   img {
+    display: block;
     @include reset-box-model;
     width: columns(1.7);
     position: absolute;
     bottom: 15%;
     right: 0;
-    margin-bottom: rhythm(1);
     opacity: .75;
+    @include trailer(1);
     @include at-breakpoint($pad) {
       width: columns(2);
     }
     @include at-breakpoint($desktop) {
       position: static;
-      width: columns(1.5, 3);
+      width: columns(1.2, 3);
       // float: right;
       @include leader(3);
     }
@@ -91,8 +92,12 @@
       width: 400px;
     }
     @include at-breakpoint($desktop) {
+      opacity: .7;
       width: 350px;
       left: -.7em;
+      @media (max-height: 610px) {
+        bottom: -3em;
+      }
     }
   }
 }

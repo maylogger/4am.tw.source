@@ -130,7 +130,7 @@ html, body { background: #111111; height: 100%; }
 .page:after { content: ""; display: table; clear: both; }
 
 .page { height: 100%; position: relative; }
-@media (min-width: 940px) { .page { height: auto; } }
+@media (min-width: 940px) { .page { height: auto; margin: 0; max-width: 1440px; } }
 
 .menu { position: absolute; top: 0px; left: -100%; z-index: 200; height: 100%; width: 100%; }
 
@@ -148,13 +148,13 @@ html, body { background: #111111; height: 100%; }
 .open-menu .main { display: none; }
 
 @media (min-width: 940px) { .toggle-menu-btn, .back { display: none; }
-  .menu { position: fixed; left: 0; right: auto; width: 23.40426%; float: left; margin-right: 2.12766%; }
+  .menu { position: fixed; left: 0; right: auto; width: 23.40426%; float: left; margin-right: 2.12766%; max-width: 267px; }
   .menu-inner { height: auto; overflow: visible; }
   .main { padding-top: 156px; display: block; width: 74.46809%; float: right; margin-right: 0; }
   .open-menu .page { overflow: visible; }
   .open-menu .menu-inner { overflow: visible; }
   .open-menu .main { display: block; } }
-@media (min-width: 940px) and (max-height: 620px) { .menu { position: relative; } }
+@media (min-width: 940px) and (max-height: 610px) { .menu { position: relative; } }
 
 .timeline-item .date, .timeline-item .title, .timeline-item .time { font-family: "DINAlternate-Bold", "Impact", "Arial", sans-serif; font-weight: bold; }
 
@@ -232,9 +232,9 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 .header .logo a { color: #e4e4e3; display: block; }
 .header .logo a { text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/logo.png?1395979084'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/logo.svg?1395979092'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
 @media (min-width: 940px) { .header .logo { width: 125%; } }
-.header img { margin: 0; padding: 0; border: 0; width: 40.66667%; position: absolute; bottom: 15%; right: 0; margin-bottom: 24px; opacity: .75; }
+.header img { display: block; margin: 0; padding: 0; border: 0; width: 40.66667%; position: absolute; bottom: 15%; right: 0; opacity: .75; margin-bottom: 24px; }
 @media (min-width: 480px) { .header img { width: 22.58065%; } }
-@media (min-width: 940px) { .header img { position: static; width: 50%; margin-top: 72px; } }
+@media (min-width: 940px) { .header img { position: static; width: 41.81818%; margin-top: 72px; } }
 .header .story { font-size: 16px; line-height: 24px; position: absolute; bottom: 15%; left: 59.33333%; color: #e4e4e3; }
 .header .story:after { content: " →"; }
 @media (min-width: 480px) { .header .story { left: 77.41935%; } }
@@ -242,7 +242,8 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 .header .slogan { position: absolute; bottom: 0; z-index: 1000; clear: both; font-size: 13px; line-height: 24px; color: #e4e4e3; width: 85%; }
 .header .slogan p { margin: 0; padding: 0; border: 0; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/slogan.png?1395979084'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/slogan.svg?1395979092'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
 @media (min-width: 480px) { .header .slogan { width: 400px; } }
-@media (min-width: 940px) { .header .slogan { width: 350px; left: -.7em; } }
+@media (min-width: 940px) { .header .slogan { opacity: .7; width: 350px; left: -.7em; } }
+@media (min-width: 940px) and (max-height: 610px) { .header .slogan { bottom: -3em; } }
 
 .menu-list { margin: 0; padding: 0; border: 0; list-style: none; }
 .menu-list li { border-top: 1px solid #ccc; background: #dcddde; }

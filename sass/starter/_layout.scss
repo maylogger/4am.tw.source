@@ -35,6 +35,8 @@ html, body {
   position: relative;
   @include at-breakpoint($desktop) {
     height: auto;
+    margin: 0;
+    max-width: 1440px;
   }
 }
 
@@ -148,9 +150,9 @@ $off-canvas-main-bg-color: white;
     position: fixed;
     left: 0;
     right: auto;
-    // width: columns($off-canvas-menu-width);
     @include span-columns($off-canvas-menu-width);
-    @media (max-height: 620px) {
+    max-width: 267px;
+    @media (max-height: 610px) {
       position: relative;
     }
   }
