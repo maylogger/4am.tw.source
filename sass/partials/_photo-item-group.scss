@@ -1,0 +1,18 @@
+.photo-item-group {
+  @include padding-leader(.5);
+  @include at-breakpoint($desktop) {
+    padding-top: 0;
+  }
+}
+.photo-item {
+  @include trailer(2);
+  text-align: center;
+  .photo {
+    img {
+      margin: 0 auto;
+    }
+  }
+  .text {
+    @include adjust-font-size-to(15px);
+  }
+}

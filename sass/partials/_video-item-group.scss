@@ -1,0 +1,29 @@
+.video-item-group {
+  @include padding-leader(.5);
+  @include at-breakpoint($desktop) {
+    padding-top: 0;
+  }
+}
+.video-item {
+  @include trailer(2);
+  text-align: center;
+  .video {
+    @include trailer(.25);
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    iframe, video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+  }
+  .text {
+    @include adjust-font-size-to(15px);
+  }
+
+}
