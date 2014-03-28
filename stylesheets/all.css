@@ -215,13 +215,21 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 
 .timeline { position: relative; }
 
-.timeline-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: white; z-index: -1; }
+.timeline-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: #e4e4e3; z-index: -1; }
 
-.timeline-item { margin-bottom: 24px; }
+.timeline-item { margin-bottom: 24px; color: #e4e4e3; padding-left: 26px; }
 .timeline-item:after { content: ""; display: table; clear: both; }
-.timeline-item .date { border: 1px solid white; padding: 0 6px; font-size: 13px; line-height: 24px; background-color: black; color: white; line-height: 22px; }
-.timeline-item .title { float: left; font-size: 20px; line-height: 24px; }
-.timeline-item .time:before { content: ''; position: absolute; border: 6px solid black; width: 8px; height: 8px; background-color: white; left: -9px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.timeline-item .date { position: absolute; left: -23px; border: 1px solid #e4e4e3; padding: 0 6px; font-size: 15px; line-height: 24px; font-weight: bold; background-color: black; color: #e4e4e3; line-height: 20px; }
+.timeline-item .title { float: left; padding-left: 12px; font-size: 20px; line-height: 24px; }
+.timeline-item .time:before { content: ''; position: absolute; border: 6px solid black; width: 8px; height: 8px; background-color: #e4e4e3; left: -9px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.timeline-item .text { color: #bebebc; font-size: 15px; line-height: 24px; }
+.timeline-item .image { margin-bottom: 24px; }
+.timeline-item .image img { display: block; margin-bottom: 0px; }
+@media (min-width: 480px) { .timeline-item { padding-left: 16px; }
+  .timeline-item .title { padding-left: 0; }
+  .timeline-item .time { float: left; } }
+
+@media (min-width: 480px) { .timeline-item-content { width: 87.09677%; float: right; margin-right: 0; } }
 
 .header .logo { font-size: 28px; line-height: 48px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1395996380'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/logo.svg?1395996380'); width: auto; height: 0px; padding-top: 15%; }
 .header .logo em { font-style: normal; }

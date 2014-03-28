@@ -7,41 +7,68 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: white;
+  background-color: $color-gray;
   z-index: -1;
 }
 .timeline-item {
   @include pie-clearfix;
   @include trailer(1);
+  color: $color-gray;
+  padding-left: 26px;
   .date {
-    border: 1px solid white;
+    position: absolute;
+    left: -23px;
+    border: 1px solid $color-gray;
     padding: 0 6px;
-    @include adjust-font-size-to(13px);
+    @include adjust-font-size-to(15px);
+    font-weight: bold;
     background-color: black;
-    color:white;
-    line-height: $base-line-height - 2px;
+    color:$color-gray;
+    line-height: $base-line-height - 4px;
   }
   .title {
     float: left;
+    padding-left: 12px;
     @include adjust-font-size-to(20px);
   }
   .time {
-      &:before {
+    &:before {
       content: '';
       position: absolute;
       border: 6px solid black;
       width: 8px;
       height: 8px;
-      background-color: white;
+      background-color: $color-gray;
       left: -9px;
       @include border-radius(20px);
     }
   }
   .text {
-
+    color: darken($color-gray, 15%);
+    @include adjust-font-size-to(15px);
   }
   .image {
+    @include trailer(1);
+    img {
+      display: block;
+      @include trailer(0);
+    }
+  }
+  @include at-breakpoint($pad) {
+    padding-left: 16px;
+    .title {
+      padding-left: 0;
+    }
+    .time {
+      float: left;
+    }
+  }
+}
 
+.timeline-item-content {
+
+  @include at-breakpoint($pad) {
+    @include span-columns(7 omega);
   }
 }
 
