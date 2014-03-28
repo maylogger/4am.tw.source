@@ -1,0 +1,18 @@
+doctype 5
+html lang="zh-TW" class="no-js"
+  head
+    = render "/layout_head"
+    = render "/layout_og"
+  body.off-canvas.open-menu
+    .page
+      .menu
+        .menu-inner#scrollable
+          = render "/partials/header"
+      .main
+        .main-inner
+          button.off-canvas-toggle-btn back
+          = yield
+
+
+    = render "/layout_foot"
+    = render "/layout_livereload"

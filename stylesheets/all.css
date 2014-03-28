@@ -141,7 +141,7 @@ html, body { height: 100%; }
 
 .menu { position: absolute; top: 0px; left: 0; z-index: 200; height: 100%; width: 100%; }
 
-.main { position: relative; z-index: 100; top: 0; right: 0; -webkit-transition: -webkit-transform 0.3s ease-out, max-width 0.5s; -moz-transition: -moz-transform 0.3s ease-out, max-width 0.5s; -o-transition: -o-transform 0.3s ease-out, max-width 0.5s; transition: transform 0.3s ease-out, max-width 0.5s; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; }
+.main { background-color: #dcddde; position: relative; z-index: 100; top: 0; right: 0; -webkit-transition: -webkit-transform 0.3s ease-out, max-width 0.5s; -moz-transition: -moz-transform 0.3s ease-out, max-width 0.5s; -o-transition: -o-transform 0.3s ease-out, max-width 0.5s; transition: transform 0.3s ease-out, max-width 0.5s; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; }
 
 .main-inner { padding: 0 24px; height: 100%; overflow: auto; }
 
@@ -217,15 +217,18 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 
 .timeline-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: #444444; z-index: -1; }
 
-.timeline-item { margin-bottom: 24px; color: #444444; padding-left: 26px; }
+.timeline-item { position: relative; margin-bottom: 24px; color: #444444; padding-left: 26px; }
 .timeline-item:after { content: ""; display: table; clear: both; }
-.timeline-item .date { position: absolute; left: -23px; border: 1px solid #444444; padding: 0 6px; font-size: 15px; line-height: 24px; font-weight: bold; background-color: #dcddde; color: #444444; line-height: 20px; }
-.timeline-item .title { float: left; padding-left: 12px; font-size: 20px; line-height: 24px; }
-.timeline-item .time:before { content: ''; position: absolute; border: 6px solid #dcddde; width: 8px; height: 8px; background-color: #444444; left: -9px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.timeline-item .date { font-size: 20px; line-height: 24px; font-weight: bold; background-color: #dcddde; color: #444444; }
+.timeline-item .date:before { content: ''; position: absolute; border: 6px solid #dcddde; width: 12px; height: 12px; background-color: #444444; left: -11px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.timeline-item .title { float: left; font-size: 20px; line-height: 24px; font-weight: bold; }
+.timeline-item .time:before { content: ''; position: absolute; top: 2px; border: 4px solid #dcddde; width: 8px; height: 8px; background-color: #444444; left: -7px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
 .timeline-item .text { color: #1e1e1e; font-size: 15px; line-height: 24px; }
 .timeline-item .image { margin-bottom: 24px; }
 .timeline-item .image img { display: block; margin-bottom: 0px; }
-@media (min-width: 480px) { .timeline-item .title { padding-left: 0; }
+@media (min-width: 480px) { .timeline-item { padding-left: 20px; }
+  .timeline-item .date { float: left; }
+  .timeline-item .title { padding-left: 0; }
   .timeline-item .time { float: left; } }
 
 @media (min-width: 480px) { .timeline-item-content { width: 87.09677%; float: right; margin-right: 0; } }
