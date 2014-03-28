@@ -18,6 +18,7 @@ $desktop: $desktop-break $desktop-columns;
 
 
 html, body {
+  // background: black;
   height: 100%;
   @include at-breakpoint($desktop) {
     height: auto;

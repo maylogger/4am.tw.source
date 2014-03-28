@@ -1,7 +1,14 @@
-%avenir {
-  font-family: "AvenirNext-DemiBoldItalic", "Avenir-HeavyOblique", "Arial", "STHeitiTC-Light", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+%din {
+  font-family: "DINAlternate-Bold", "Impact", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+%futura {
+  font-family: "Futura", "Arial", sans-serif;
+}
+
+%palatino {
+  font-family: "PalatinoLinotype-Roman", "Palatino-Roman", "TimesNewRomanPSMT", "Times", serif;
 }
 
 %subpixel {
@@ -9,7 +16,7 @@
 }
 
 body {
-  @extend %avenir;
+  @extend %palatino;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
