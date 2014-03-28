@@ -4,7 +4,8 @@
 }
 
 %futura {
-  font-family: "Futura", "Arial", sans-serif;
+  font-family: "Futura", "Futura-Medium","Arial", sans-serif;
+  font-weight: normal;
 }
 
 %palatino {
@@ -57,15 +58,16 @@ h6 {
 }
 
 .back {
+  @extend %futura;
   position: fixed;
+  z-index: 3000;
   top: 1em;
   left: 0;
   padding: 0 5em 0 .8em;
   @include adjust-font-size-to(16px, 2);
   background: rgba(black,.7);
   @include background( linear-gradient( to right, rgba(black,.7) 50%, rgba(black,0)  ) );
-  color: $color-green;
-  font-weight: bold;
+  color: white;
   &:hover, &:active {
     background: rgba(white,.7);
     @include background( linear-gradient( to right, rgba(white,.7) 50%, rgba(white,0)  ) );

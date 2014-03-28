@@ -20,13 +20,6 @@
     @extend %futura;
     em { font-style: normal; display: block; }
     a { color: $color-gray; display: block; }
-    // replace text
-    a {
-      @include replace-text-with-svg("logo");
-      width: auto;
-      height: 0px;
-      padding-top: 15%;
-    }
     // style
     @include trailer(.5);
     width: 80%;
@@ -82,14 +75,6 @@
     @include adjust-font-size-to(13px);
     @extend %futura;
     color: $color-gray;
-    // replace text
-    p {
-      @include reset-box-model;
-      @include replace-text-with-svg("slogan");
-      width: auto;
-      height: 0px;
-      padding-top: 15%;
-    }
     width: 85%;
     @include at-breakpoint($pad) {
       width: 400px;

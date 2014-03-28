@@ -91,7 +91,7 @@ $off-canvas-main-bg-color: white;
 .main-inner {
   position: relative;
   z-index: 110;
-  padding: 0 $gutter-width 10em;
+  padding: 0 $gutter-width 5em;
   height: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -178,4 +178,20 @@ $off-canvas-main-bg-color: white;
     }
   }
 
+}
+
+
+.main-foot {
+  @include padding-leader(3);
+  text-align: center;
+  .logo-4amtw {
+    @include inline-block;
+    @include trailer(.5);
+    position: relative;
+    left: -13px;
+  }
+  p {
+    @include adjust-font-size-to(13px);
+    @extend %din;
+  }
 }

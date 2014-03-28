@@ -1,0 +1,26 @@
+.logo {
+  a {
+    display: block;
+    @include replace-text-with-svg("logo");
+    width: auto;
+    height: 0px;
+    padding-top: 15%;
+  }
+}
+
+.slogan {
+  p {
+    @include reset-box-model;
+    @include replace-text-with-svg("slogan");
+    width: auto;
+    height: 0px;
+    padding-top: 15%;
+  }
+}
+
+.logo-4amtw {
+  a {
+    display: block;
+    @include replace-text-with-svg("4am");
+  }
+}
