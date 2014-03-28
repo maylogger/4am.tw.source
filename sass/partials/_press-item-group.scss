@@ -2,33 +2,36 @@
   @include pie-clearfix;
   @include trailer(2.5);
   @include at-breakpoint($desktop) {
-    @include trailer(3);
+    @include leader(3);
+    @include trailer(4);
   }
   blockquote {
     @include trailer(.5);
     @include adjust-font-size-to(15px);
     padding-left: 0;
     border-left: none;
+    @include at-breakpoint($desktop) {
+      @include adjust-font-size-to(20px, 1.5);
+    }
   }
   cite {
+    font-style: normal;
     text-align: right;
     float: right;
-    @include adjust-font-size-to(13px, 4/5);
+    @include adjust-font-size-to(13px);
     &:before {
-      content: '';
-      position: relative;
-      top: -3px;
-      display: inline-block;
-      height: 1px;
-      width: 12px;
-      background-color: #999;
+      content: '—';
       margin-right: 8px;
+      color: darken($background-gray, 20%);
     }
     a {
       @include link-colors(#999, $color-gray);
     }
     span {
       @include nowrap;
+    }
+    @include at-breakpoint($desktop) {
+      @include adjust-font-size-to(15px);
     }
   }
 }
