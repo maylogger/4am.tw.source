@@ -94,15 +94,17 @@
 .menu-list {
   @include reset-box-model;
   @include reset-list-style;
+  background: $background-gray;
   li {
     border-top: 1px solid #ccc;
-    background: $background-gray;
   }
   a {
+    @include unstyled-link;
     @include adjust-font-size-to(18px);
     display: block;
     color: #444;
     padding: .4em 15px;
+
     &:after {
       @include adjust-font-size-to(20px, 1);
       content: " ›";
@@ -113,7 +115,8 @@
   }
   @include at-breakpoint($desktop) {
     @include trailer(2);
-    li { background: transparent; border: none }
+    background: transparent;
+    li { border: none }
     a {
       @include adjust-font-size-to(16px);
       color: $color-gray;
@@ -125,15 +128,18 @@
       color: $color-gray;
     }
     a:hover, a.active { background: rgba($background-gray,.3); }
+    a.active { text-decoration: underline; }
   }
   .social {
+    @include clearfix;
+    background: $background-gray;
     @include reset-box-model;
     @include reset-list-style;
-    @include leader(1);
     h2 {
       @include reset-box-model;
-      font-weight: normal;
       padding: 0 15px;
+      background: rgba($background-black, .2);
+      font-weight: normal;
       @include adjust-font-size-to(12px);
     }
     li {
@@ -143,6 +149,10 @@
     a:after {
       float: none;
       top: 0;
+    }
+    @include at-breakpoint($desktop) {
+      @include leader(1);
+      background: transparent;
     }
   }
 }

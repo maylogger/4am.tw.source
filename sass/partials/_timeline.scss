@@ -28,6 +28,7 @@
     display: block;
     height: 48px;
     width: 2px;
+    margin-bottom: -24px;
     @include background(
       linear-gradient( rgba(black,0), rgba(black,1) )
       );
