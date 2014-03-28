@@ -156,6 +156,8 @@ html, body { height: 100%; }
   .open-menu .page { overflow: visible; }
   .open-menu .menu-inner { overflow: visible; height: auto; }
   .open-menu .main { height: auto; overflow: visible; -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); } }
+.header .logo { font-family: "Futura", "Arial", sans-serif; }
+
 body { font-family: "PalatinoLinotype-Roman", "Palatino-Roman", "TimesNewRomanPSMT", "Times", serif; }
 
 body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: #444444; }
@@ -211,5 +213,6 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 
 .page-change-animation.ng-leave.ng-leave-active { -webkit-transform: translateX(-10%); -moz-transform: translateX(-10%); -ms-transform: translateX(-10%); -o-transform: translateX(-10%); transform: translateX(-10%); }
 
-.header .logo { font-size: 20px; line-height: 24px; }
+.header .logo { font-size: 28px; line-height: 48px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1395979084'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/logo.svg?1395979092'); }
 .header .logo em { font-style: normal; }
+.header .logo a { color: #e4e4e3; }
