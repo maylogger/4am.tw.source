@@ -141,15 +141,18 @@ html, body { height: 100%; }
 
 .main { position: relative; z-index: 100; top: 0; right: 0; -webkit-transition: -webkit-transform 0.3s ease-out, max-width 0.5s; -moz-transition: -moz-transform 0.3s ease-out, max-width 0.5s; -o-transition: -o-transform 0.3s ease-out, max-width 0.5s; transition: transform 0.3s ease-out, max-width 0.5s; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; }
 
+.main-inner { padding: 0 24px; }
+
 .open-menu .page { height: 100%; overflow: hidden; }
 .open-menu .menu-inner { height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
 .open-menu .main { height: 100%; overflow: hidden; -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -ms-transform: translateX(100%); -o-transform: translateX(100%); transform: translateX(100%); }
 
-@media (min-width: 480px) { .menu { width: 65.21739%; }
-  .open-menu .main { -webkit-transform: translateX(69.56522%); -moz-transform: translateX(69.56522%); -ms-transform: translateX(69.56522%); -o-transform: translateX(69.56522%); transform: translateX(69.56522%); } }
-@media (min-width: 940px) { .menu { position: relative; width: 23.40426%; float: left; margin-right: 2.12766%; }
+@media (min-width: 480px) { .menu { width: 52.17391%; }
+  .open-menu .main { -webkit-transform: translateX(52.17391%); -moz-transform: translateX(52.17391%); -ms-transform: translateX(52.17391%); -o-transform: translateX(52.17391%); transform: translateX(52.17391%); } }
+@media (min-width: 940px) { .menu { position: fixed; width: 25.53191%; }
   .main { width: 74.46809%; float: right; margin-right: 0; }
   .open-menu .page { overflow: visible; }
+  .open-menu .menu-inner { overflow: visible; height: auto; }
   .open-menu .main { height: auto; overflow: visible; -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); } }
 body { font-family: "AvenirNext-DemiBoldItalic", "Avenir-HeavyOblique", "Arial", "STHeitiTC-Light", sans-serif; font-weight: 300; font-style: normal; }
 

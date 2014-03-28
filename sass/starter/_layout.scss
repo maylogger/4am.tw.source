@@ -16,24 +16,23 @@ $desktop: $desktop-break $desktop-columns;
 // debug
 @import "layout-debug";
 
+
 html, body {
   height: 100%;
 }
-
 
 #{$page-container} {
   $container-style: fluid;
   @include container();
 }
 
-$off-canvas-menu-width: 100%;
-$off-canvas-main-bg-color: white;
-
 .page {
   min-height: 100%;
   position: relative;
 }
 
+$off-canvas-menu-width: 100%;
+$off-canvas-main-bg-color: white;
 .menu {
   position: absolute;
   top: 0px;
@@ -52,6 +51,9 @@ $off-canvas-main-bg-color: white;
   // background-color: $off-canvas-main-bg-color;
   @include transition(transform .3s ease-out, max-width .5s);
   @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
+}
+.main-inner {
+  padding: 0 $gutter-width;
 }
 
 
@@ -80,9 +82,9 @@ $off-canvas-main-bg-color: white;
 
 
 @include at-breakpoint($pad) {
-  $off-canvas-menu-width: 4;
+  $off-canvas-menu-width: 3;
   .menu {
-    width: columns(4);
+    width: columns($off-canvas-menu-width) + gutter($total_columns);
   }
   .main {
 
@@ -93,7 +95,7 @@ $off-canvas-main-bg-color: white;
 
     }
     .main {
-      @include translateX( space(4, $total_columns) );
+      @include translateX( space($off-canvas-menu-width, $total_columns) );
     }
   }
 
@@ -103,8 +105,8 @@ $off-canvas-main-bg-color: white;
 @include at-breakpoint($desktop) {
   $off-canvas-menu-width: 3;
   .menu {
-    position: relative;
-    @include span-columns($off-canvas-menu-width, $total_columns);
+    position: fixed;
+    width: columns($off-canvas-menu-width) + gutter($total_columns);
   }
   .main {
     @include span-columns( ( $total_columns - $off-canvas-menu-width ) omega, $total_columns);
@@ -113,8 +115,9 @@ $off-canvas-main-bg-color: white;
     .page {
       overflow: visible;
     }
-    .menu {
-
+    .menu-inner {
+      overflow: visible;
+      height: auto;
     }
     .main {
       height: auto;
