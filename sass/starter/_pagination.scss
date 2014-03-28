@@ -1,0 +1,43 @@
+.pagination {
+  @include pie-clearfix;
+  @include reset-box-model;
+  @include trailer(2);
+  list-style: none;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 0;
+    a {
+      color: $color-black;
+      text-align: center;
+      display: inline-block;
+      padding: 0.25em 0.75em;
+      @include adjust-font-size-to(14px);
+      cursor: pointer;
+      &:hover {
+        text-decoration: none;
+        color: white;
+        background-color: $color-green;
+      }
+
+      &.active {
+        color: white;
+        background-color: $color-black;
+      }
+    }
+    .more {
+      padding: 0.25em 0.5em;
+    }
+    .disable {
+      padding: 0.25em 0.75em;
+      color: #999;
+    }
+  }
+  @include at-breakpoint($pad) {
+    li {
+      a {
+        @include adjust-font-size-to(16px);
+      }
+    }
+  }
+}

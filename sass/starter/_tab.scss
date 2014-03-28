@@ -1,0 +1,31 @@
+.tabs-nav {
+  @include reset-box-model;
+  list-style: none;
+
+
+  &.full-width {
+    background-color: #fafaf9;
+  }
+
+
+}
+
+
+// 動畫
+.tab-content {
+
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &.fade {
+    @include transition(opacity .5s);
+    opacity: 0;
+    &.in {
+      opacity: 1;
+    }
+  }
+
+}

@@ -1,0 +1,51 @@
+.action-bar {
+  @include pie-clearfix;
+  padding: rhythm(1.5) 0 rhythm(.5);
+
+  .content {
+    @include trailer(1);
+  }
+  .action {
+    @include trailer(1);
+    text-align: center;
+  }
+
+  .slogan {
+    @include adjust-font-size-to(20px);
+    @extend %subpixel;
+    color: $action-bar-color;
+    text-align: center;
+  }
+
+  .btn {
+    display: inline-block;
+    min-width: 5em;
+    text-align: center;
+    padding: rhythm(.5) rhythm(.75);
+    font-size: 18px;
+    line-height: 1em;
+    border: 2px solid $action-bar-color;
+    color: $action-bar-color;
+    @extend %subpixel;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include at-breakpoint($pad) {
+    width: 100%;
+    .slogan {
+      text-align: left;
+      br {display: none}
+    }
+    .content {
+      @include leader(.5);
+      float: left;
+    }
+    .action {
+      float: right;
+    }
+
+  }
+
+}

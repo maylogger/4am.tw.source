@@ -1,0 +1,96 @@
+@mixin set-block-grid ($left-grid: $total_columns / 2, $right-grid: $total_columns / 2, $total-grid: $left-grid + $right-grid) {
+
+  $left-columns: ($left-grid /  $total-grid) * $total_columns;
+  $right-columns: ($right-grid /  $total-grid) * $total_columns;
+
+  &.content-#{$left-grid}-image-#{$right-grid} {
+
+    .feature-block-content {
+      @include span-columns($left-columns, $total_columns);
+    }
+    .feature-block-image {
+      @include span-columns($right-columns omega, $total_columns);
+    }
+  }
+
+  &.image-#{$left-grid}-content-#{$right-grid} {
+    .feature-block-content {
+      @include span-columns($right-columns omega, $total_columns);
+    }
+    .feature-block-image {
+      @include span-columns($left-columns, $total_columns);
+    }
+  }
+
+}
+
+.feature-block {
+  @include pie-clearfix;
+  padding: rhythm(2) 0 rhythm(1);
+
+  &:nth-child(2n+1) {
+    background-color: #f9f9f7;
+  }
+
+  .feature-block-content {
+    @include trailer(1);
+  }
+
+  .feature-block-image {
+    @include trailer(1);
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .pull-right {
+    float: right;
+    margin-right: 0;
+  }
+
+  // 特殊排版區塊
+  &.center {
+    .headline {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 260px;
+    }
+  }
+
+
+  @include at-breakpoint($pad) {
+    padding: rhythm(3) 0 rhythm(1);
+    .feature-block-image {
+      @include trailer(2);
+    }
+    .feature-block-content {
+      @include trailer(2);
+    }
+
+    &.center {
+      .headline {
+        max-width: 440px;
+      }
+    }
+
+    // 設定 block-content 與 block-image 的 layout
+    @include set-block-grid(1, 1);
+    @include set-block-grid(1, 2);
+    @include set-block-grid(2, 1);
+
+  } // end pad
+
+  @include at-breakpoint($desktop) {
+    padding: rhythm(4) 0 rhythm(2);
+    &.center {
+      .headline {
+        max-width: 560px;
+      }
+    }
+
+  } // end desktop
+
+}
+
+

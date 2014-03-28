@@ -1,9 +1,25 @@
 doctype 5
-html lang="zh-TW"
+html lang="zh-TW" class="no-js"
   head
     = render "/layout_head"
     = render "/layout_og"
-  body
-    = yield
+  body.off-canvas.open-menu
+    .wrapper
+
+      .outside
+        .outside-inner
+          .main-nav data-set="main-nav"
+            ul
+              - 10.times do
+                li: a href="/demo" Demo
+                li: a href="/shop" Shop
+                li: a href="/portfolio" Protfolio
+                li: a href="/contact" Contact
+
+      .page
+        .main
+          .container= yield
+        .off-canvas-mask
+
     = render "/layout_foot"
     = render "/layout_livereload"

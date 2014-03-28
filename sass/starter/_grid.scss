@@ -1,0 +1,133 @@
+// slim 與 scss 架構為 .classname.grid-xyz .grid（x, y, z 為任一數值）
+// 注意事項：若設定 columns 值不能給 susy 的 total_columns 整除，將無法正常顯示
+// 使用 wide-gutter 將會使 .col 變為 border-box 模式
+@mixin set-grid($phone-columns: 1, $pad-columns: $phone-columns, $desktop-columns: $pad-columns){
+
+  // grid set
+  .grid-#{$phone-columns}-#{$pad-columns}-#{$desktop-columns} .col {
+
+    @include trailer(1);
+
+    // set-span-columns
+    @include span-columns( $total_columns / $phone-columns, $total_columns );
+
+    // set nth-omega
+    @if $phone-columns > 1 {
+      @include nth-omega($phone-columns + n);
+    }
+
+    @include at-breakpoint($pad) {
+
+      // set span-columns
+      @include span-columns( $total_columns / $pad-columns, $total_columns );
+
+      // remove-nth-omega
+      @if $phone-columns > 1 {
+        @include remove-nth-omega($phone-columns + n, child, $total_columns);
+      }
+
+      // set nth-omega
+      @if $pad-columns > 1 {
+        @include nth-omega($pad-columns + n);
+      }
+
+    } // end pad
+
+    @include at-breakpoint($desktop) {
+
+      // set span-columns
+      @include span-columns( $total_columns / $desktop-columns, $total_columns);
+
+      // remove-nth-omega
+      @if $pad-columns > 1 {
+        @include remove-nth-omega($pad-columns + n, child, $total_columns);
+      }
+
+      // set nth-omega
+      @if $desktop-columns > 1 {
+        @include nth-omega( $desktop-columns + n );
+      }
+
+    } // end desktop
+
+  }
+  // grid set end
+
+
+  // wide-gutter
+  .grid-#{$phone-columns}-#{$pad-columns}-#{$desktop-columns}.wide-gutter .col {
+
+    @include box-sizing(border-box);
+    @include at-breakpoint($pad) {
+      padding: 0 gutter();
+    }
+
+    // 無內縮版本
+    // @if $phone-columns > 1 {
+    //   padding: 0 gutter() / 2;
+    //   &:first-child {
+    //     padding-left: 0;
+    //   }
+    //   &:nth-child(#{$phone-columns}n) {
+    //     padding-right: 0;
+    //   }
+    // }
+
+    // @include at-breakpoint($pad) {
+    //   padding: 0 gutter() / 2;
+    //   &:first-child {
+    //     padding-left: 0;
+    //   }
+    //   @if $phone-columns > 1 {
+    //     &:nth-child(#{$phone-columns}n) {
+    //       padding-right: gutter() / 2;
+    //     }
+    //   }
+    //   @if $pad-columns > 1 {
+
+    //     &:nth-child(#{$pad-columns}n) {
+    //       padding-right: 0;
+    //     }
+    //   }
+    // }
+
+    // @include at-breakpoint($desktop) {
+    //   padding: 0 gutter() / 2;
+    //   &:first-child {
+    //     padding-left: 0;
+    //   }
+    //   @if $pad-columns > 1 {
+    //     &:nth-child(#{$pad-columns}n) {
+    //       padding-right: gutter() / 2;
+    //     }
+    //   }
+    //   @if $desktop-columns > 1 {
+    //     &:nth-child(#{$desktop-columns}n) {
+    //       padding-right: 0;
+    //     }
+    //   }
+    // }
+
+  }
+  // wide-gutter end
+
+
+}
+
+
+// 設定專案所需的 grid 樣式
+@include set-grid(1, 2);
+@include set-grid(1, 3);
+@include set-grid(1, 4);
+@include set-grid(1, 2, 4);
+@include set-grid(2, 2, 4);
+@include set-grid(2, 4, 4);
+
+
+.row {
+  @include pie-clearfix;
+  @include trailer(1);
+}
+
+
+

@@ -1,0 +1,37 @@
+.ng-wrap {
+  position: relative;
+  overflow: hidden;
+  // 隱藏移動出框問題
+  // min-height: 460px;
+}
+
+.page-change-animation {
+  // .3s 是等 menu 關閉的 delay
+  @include transition(.30s .35s ease-out);
+  background: white;
+  position: relative;
+  z-index: 20;
+  @include at-breakpoint($pad) {
+    // 長大到 pad 以上就不 delay 了喲
+    @include transition(.30s ease-out);
+  }
+}
+
+.page-change-animation.ng-enter {
+  @include translateX(100%);
+}
+.page-change-animation.ng-enter.ng-enter-active {
+  @include translateX(0%);
+}
+
+.page-change-animation.ng-leave {
+  @include translateX(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.page-change-animation.ng-leave.ng-leave-active {
+  @include translateX(-10%);
+}

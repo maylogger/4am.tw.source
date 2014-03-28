@@ -1,0 +1,49 @@
+.header {
+  position: relative;
+  .logo {
+    float: left;
+    @include adjust-font-size-to(22px, 2);
+    font-weight: bold;
+    a {
+      display: block;
+      color: black;
+      // @include replace-text-with-svg("logo-small");
+      @include at-breakpoint($desktop) {
+        margin: auto;
+        // @include replace-text-with-svg("logo");
+      }
+      &:hover {
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
+
+  .menu-btn {
+    float: right;
+  }
+
+  @include at-breakpoint($pad) {
+    padding: rhythm(.25) 0;
+
+    .menu-btn {
+      display: none;
+    }
+
+    .main-nav {
+      float: right;
+      padding: 12px 0 0 0;
+    }
+
+  }
+
+  @include at-breakpoint($desktop) {
+    padding: rhythm(1) 0;
+    .logo {
+      padding: 0;
+      @include adjust-font-size-to(28px);
+    }
+  }
+
+}
+

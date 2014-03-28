@@ -1,0 +1,44 @@
+.main-nav {
+  @include reset-box-model;
+  @include pie-clearfix;
+  padding: 36px;
+  ul {
+    @include reset-box-model;
+    list-style: none;
+  }
+  a {
+    color: $main-nav-color;
+    font-style: italic;
+    @extend %subpixel;
+    @include adjust-font-size-to(16px);
+    &:hover {
+      color: lighten($main-nav-color, 20%);
+      text-decoration: none;
+    }
+  }
+
+  // append-around
+  .header & {
+    display: none;
+  }
+
+  @include at-breakpoint($pad) {
+    padding: 0 24px;
+    text-align: center;
+    li {
+      display: block;
+      float: left;
+      margin: 0 .5em;
+    }
+    // append-around
+    .outside & {
+      display: none;
+    }
+    .header & {
+      display: block;
+    }
+  }
+}
+
+
+

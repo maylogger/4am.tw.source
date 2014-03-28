@@ -1,0 +1,72 @@
+// layout-debug
+$grid-background-column-color: rgba(#f15a14,.2);
+$grid-background-baseline-color: rgba(#009a8e,.3);
+
+
+//======== Base Color
+$color-darken-black: #252525;
+$color-black: #444;
+$color-gray: #999;
+$color-lighter-gray: #f0f2f0;
+$color-blue: #369;
+$color-red: #ae3941;
+$color-green: #8fbe3e;
+
+//======== Global Setting ========
+// text
+$global-color: $color-black;
+$global-muted-color: lighten($global-color, 50%);
+
+$global-link-color: $color-green;
+$global-link-hover-color: darken($color-blue, 20%);
+
+// background & border
+$global-background: white;
+$global-spectail-block: #fafafa;
+$global-divider: $color-lighter-gray;
+
+
+//======== Typography ========
+// font-size
+$font-size-xxl: $base-font-size * 2;
+$font-size-xl: $base-font-size * 1.5;
+$font-size-l: $base-font-size * 1.25;
+$font-size-m: $base-font-size * 1;
+$font-size-s: $base-font-size * .875;
+$font-size-xs: $base-font-size * .75;
+
+
+//======== Partials ========
+// main-nav
+$main-nav-color: $global-color;
+
+// header
+
+
+// footer
+$footer-bg-color: $color-black;
+$footer-title-color: invert($color-darken-black);
+$footer-color: invert($global-color);
+$footer-divider-color: #515151;
+
+
+
+// intro
+$intro-title-color: $color-darken-black;
+
+
+// block
+
+
+// item
+$item-title-color: $color-darken-black;
+$item-color: $global-color;
+
+
+// action-bar
+$action-bar-bg: $color-green;
+$action-bar-color: white;
+
+
+// page-header
+$page-header-color: white;

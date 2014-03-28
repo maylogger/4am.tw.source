@@ -1,0 +1,32 @@
+.list {
+  @include reset-box-model;
+  list-style: none;
+  @include trailer(1);
+  li {
+    @include adjust-font-size-to(14px, 3/4);
+    @include pie-clearfix;
+    @include trailer(.75);
+  }
+
+  .label {
+    color: $color-black;
+    font-weight: bold;
+    @include trailer(.125);
+  }
+  .content {
+
+  }
+
+  &.has-divider {
+    li {
+      @include trailer(0);
+      padding: rhythm(.5) 0;
+    }
+    li + li {
+      border-top: 1px solid $global-divider;
+    }
+  }
+
+
+}
+

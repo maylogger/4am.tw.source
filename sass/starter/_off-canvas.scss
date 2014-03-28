@@ -1,0 +1,127 @@
+$off-canvas-menu-width: 260px;
+$off-canvas-main-bg-color: white;
+
+.off-canvas {
+
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .outside {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: 10;
+    width: $off-canvas-menu-width;
+    height: 100%;
+    background-color: white;
+  }
+
+  .page {
+    position: relative;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background-color: $off-canvas-main-bg-color;
+    @include transition(transform .3s ease-out, max-width .5s);
+    @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
+  }
+
+  .off-canvas-mask {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 10000;
+  }
+
+  // 打開外側選單時的狀態
+  &.open-menu {
+    overflow: hidden;
+
+    .wrapper {
+      height: 100%;
+    }
+
+    .outside-inner {
+      height: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .page {
+      height: 100%;
+      // overflow: auto; 目前無 javascript 控制，暫時取消滾動。
+      overflow: hidden;
+      @include translateX( -$off-canvas-menu-width);
+    }
+
+    .header {
+      position: relative;
+    }
+
+    .off-canvas-mask {
+      height: 100%;
+    }
+
+  }
+
+  // 不支援 transform 的情況下，打開外側欄改成使用 left 移動
+  .no-csstransforms3d &.open-menu {
+    .page {
+      left: $off-canvas-menu-width;
+    }
+  }
+
+
+
+  @include at-breakpoint($pad) {
+
+    .wrapper {
+
+    }
+
+    .outside {
+      display: none;
+    }
+
+    .page {
+
+    }
+
+
+    &.open-menu {
+
+      overflow: visible;
+
+      .wrapper {
+        height: auto;
+      }
+
+      .page {
+        height: auto;
+        overflow: visible;
+        @include translateX(0);
+      }
+
+      .off-canvas-mask {
+        height: 0;
+      }
+
+    }
+
+    .no-csstransforms3d &.open-menu {
+      .page {
+        left: 0;
+      }
+
+    }
+
+  } // pad 結束
+
+
+}

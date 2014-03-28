@@ -1,0 +1,49 @@
+button, a.button {
+  @include unstyled-link;
+  text-align: center;
+  padding: 1em 24px;
+  border: none;
+  background-color: #eee;
+  background-image: none;
+  color: #444;
+  text-shadow: none;
+  @include adjust-font-size-to(13px);
+  font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  @extend %subpixel;
+
+  @include border-radius(0);
+
+  // 狀態
+  &:hover {
+    background-image: none;
+    background-color: #ccc;
+    color: #444;
+  }
+  &.action {
+    background-color: black;
+    color: white;
+    &:hover {
+      background-color: $color-green;
+      color: white;
+    }
+  }
+  &.danger {
+    background-color: $color-red;
+  }
+  &.disable {
+    background-color: #ccc;
+    color: #888;
+  }
+  &.active {
+    background-color: $color-lighter-gray;
+    color: #333;
+    cursor: default;
+  }
+
+  & + & {
+    margin-left: 1em;
+  }
+}
+
+

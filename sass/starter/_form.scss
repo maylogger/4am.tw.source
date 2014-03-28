@@ -1,0 +1,158 @@
+// 垂直排列
+
+.form-group {
+  @include trailer(.5);
+
+  .form-group-label {
+    @include adjust-font-size-to(13px);
+    .required {
+      color: $color-red;
+      margin-left: 6px;
+    }
+    .alert {
+      color: $global-muted-color;
+      margin-left: 6px;
+    }
+  }
+
+  .form-group-content {
+    display: block;
+  }
+
+  textarea,
+  select,
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"] {
+    margin-right: 0;
+    border: 1px solid lighten($color-gray, 25%);
+    height: $base-line-height;
+    @include adjust-font-size-to(13px, 2/3);
+    &.full-width {
+      width: 100%;
+    }
+  }
+
+  textarea {
+    min-height: $base-line-height * 4;
+  }
+
+  .radio-group {
+    padding-left: 3px;
+    &.radio-with-icon {
+      .radio {
+        text-align: center;
+        margin-right: 1em;
+      }
+      label {
+        display: block;
+      }
+      input {
+        margin: 3px 0 0;
+      }
+      .radio-icon {
+        width: 48px;
+        display: block;
+        margin: 12px auto 8px;
+      }
+      .radio-text {
+        display: block;
+      }
+    } // radio-with-icon end
+  } // radio-group
+
+  .checkbox, .radio {
+    display: inline-block;
+    margin-right: .7em;
+    label {
+      color: $global-color;
+      @include adjust-font-size-to(13px, 2/3);
+    }
+    input {
+      margin-right: 6px;
+      width: auto;
+      height: auto;
+      @include adjust-font-size-to(14px);
+    }
+  } // .checkbox, .radio end
+
+
+
+  .note {
+    @extend %subpixel;
+    color: $global-muted-color;
+    @include adjust-font-size-to(12px, 2/3);
+    margin: 6px 0 0;
+  }
+
+  &.success {
+    .form-group-label {
+      color: $color-green;
+    }
+    input, textarea {
+      border-color: $color-green rgba($color-green, .4) rgba($color-green, .35) rgba($color-green, .35);
+    }
+  }
+
+  &.error {
+    .form-group-label {
+      color: $color-red;
+    }
+    input, textarea, select {
+      border-color: $color-red rgba($color-red, .4) rgba($color-red, .35) rgba($color-red, .35);
+    }
+    .checkbox label, .radio label {
+      color: rgba($color-red, .65);
+    }
+  }
+
+}
+
+.form-text {
+  @include leader(1);
+  @include trailer(1);
+  @include leading-border(1px, .5);
+  @include trailing-border(1px, .5);
+  border-color: $color-lighter-gray;
+  p {
+    margin: 0;
+  }
+}
+
+.form-action {
+  @include leader(1);
+  .alert {
+    margin-left: 12px;
+    @include adjust-font-size-to(12px, 1.5);
+  }
+  button, a.button {
+    padding: 0.5em 3em;
+  }
+  button + button, a.button + a.button {
+    margin-left: 1em;
+  }
+}
+
+// 水平排列
+// .form-horizontal {
+//   .form-group-label {
+//     float: left;
+//     width: 4em;
+//     text-align: right;
+//   }
+
+//   .form-group-content {
+//     overflow: hidden;
+//     padding-left: 12px;
+//   }
+// }

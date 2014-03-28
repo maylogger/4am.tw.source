@@ -1,0 +1,127 @@
+.items {
+  @include pie-clearfix;
+  .item {
+    @include pie-clearfix;
+    display: block;
+    position: relative;
+    @include trailer(2);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .item-image {
+    @include trailer(.5);
+    img {
+      margin: 0;
+      display: block;
+    }
+  }
+  .item-content {
+
+  }
+  .item-title {
+    font-size: 18px;
+    line-height: 1.125em;
+    color: $item-title-color;
+    small {
+      display: block;
+      color: lighten($item-title-color, 30%);
+    }
+  }
+  .item-title + .item-text {
+    @include leader(.5);
+  }
+  .item-text {
+    color: $item-color;
+    font-size: 14px;
+    line-height: 1.5em;
+    margin: 0 auto;
+  }
+  .item-action {
+    @include adjust-font-size-to(14px);
+    @include leader(.5);
+  }
+
+  // 所有內容置中
+  &.center {
+    .item-image {
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .item-content {
+      text-align: center;
+    }
+  }
+
+  // 左縮圖右內容
+  &.image-left {
+    .item-image {
+      float: left;
+      margin: 0 1em 0 0;
+    }
+    .item-content {
+      overflow: hidden;
+    }
+  }
+
+  // 圖片置於標題左側
+  &.title-with-image {
+    .item-image {
+      float: left;
+      margin: 0 1em 1em 0;
+    }
+    .item-content {
+    }
+    .item-title {
+      $item-image-height: 24px;
+      font-size: 18px;
+      line-height: $item-image-height;
+      @include trailer(.5);
+      float: left;
+    }
+    .item-text {
+      clear: both;
+    }
+  }
+
+  @include at-breakpoint($pad) {
+    .item {
+
+    }
+    .item-icon {
+      img {
+
+      }
+    }
+    .item-content {
+
+    }
+    .item-text {
+
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    .item {
+
+    }
+    .item-icon {
+      img {
+
+      }
+    }
+    .item-content {
+
+    }
+    .item-text {
+      @include adjust-font-size-to(16px);
+    }
+    .item-action {
+      @include adjust-font-size-to(16px);
+      @include leader(.5);
+    }
+  }
+
+}

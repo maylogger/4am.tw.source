@@ -1,0 +1,54 @@
+.headline {
+  margin: 0 auto;
+  @include trailer(2);
+
+  h2 {
+    @include trailer(.75);
+    font-size: 24px;
+    line-height: 1em;
+    color: $intro-title-color;
+  }
+
+  h3 {
+    @include trailer(.75);
+    font-size: 20px;
+    line-height: 1.1em;
+    color: $intro-title-color;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5em;
+    @include leader(0);
+  }
+
+  @include at-breakpoint($pad) {
+    h2 {
+      font-size: 30px;
+      @include trailer(1);
+    }
+    h3 {
+      font-size: 24px;
+      @include trailer(1);
+    }
+    p {
+
+    }
+
+  } // end pad
+
+  @include at-breakpoint($desktop) {
+
+    h2 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 16px;
+    }
+
+  } // end desktop
+
+}
