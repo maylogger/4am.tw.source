@@ -59,10 +59,10 @@
       @include border-radius(20px);
     }
   }
-  .text {
-    color: darken($color-gray, 15%);
-    @include adjust-font-size-to(15px);
-  }
+  // .text {
+  //   color: darken($color-gray, 15%);
+  //   @include adjust-font-size-to(15px);
+  // }
   .image {
     @include trailer(1);
     img {
