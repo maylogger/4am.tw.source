@@ -198,3 +198,16 @@ img {
     text-decoration: underline;
   }
 }
+
+.thanks {
+  @include leader(5);
+  text-align: center;
+  p {
+    line-height: 2;
+    strong {
+      display: block;
+      @include leader(1);
+      @include adjust-font-size-to(32px);
+    }
+  }
+}

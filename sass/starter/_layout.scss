@@ -150,7 +150,7 @@ $off-canvas-main-bg-color: white;
     @include span-columns($off-canvas-menu-width);
     max-width: 267px;
     min-width: 225px;
-    @media (max-height: 610px) {
+    @media (max-height: 630px) {
       position: relative;
     }
   }
