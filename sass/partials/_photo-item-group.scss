@@ -6,7 +6,7 @@
 }
 .photo-item {
   @include trailer(2);
-  text-align: center;
+  text-align: left;
   .photo {
     img {
       margin: 0 auto;
