@@ -4,22 +4,19 @@ html lang="zh-TW" class="no-js"
     = render "/layout_head"
     = render "/layout_og"
   body.off-canvas.open-menu
-    .wrapper
+    .page
+      .menu
+        .menu-inner#scrollable
+          ul.main-nav
+            - 1.times do
+              li: a href="/#" Demo
+              li: a href="/#" Shop
+              li: a href="/#" Protfolio
+              li: a href="/#" Contact
+      .main
+        button.off-canvas-toggle-btn back
+        = yield
 
-      .outside
-        .outside-inner#scrollable
-          .main-nav
-            ul
-              - 10.times do
-                li: a href="/demo" Demo
-                li: a href="/shop" Shop
-                li: a href="/portfolio" Protfolio
-                li: a href="/contact" Contact
-
-      .page
-        .main
-          .container= yield
-        .off-canvas-mask
 
     = render "/layout_foot"
     = render "/layout_livereload"
