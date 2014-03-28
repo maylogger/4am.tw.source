@@ -144,7 +144,7 @@ html, body { background: #111111; height: 100%; }
 .open-menu .menu { left: 0; }
 .open-menu .main { display: none; }
 
-@media (min-width: 940px) { .off-canvas-toggle-btn { display: none; }
+@media (min-width: 940px) { .toggle-menu-btn, .back { display: none; }
   .menu { position: fixed; left: 0; right: auto; width: 23.40426%; float: left; margin-right: 2.12766%; }
   .menu-inner { height: auto; overflow: visible; }
   .main { padding-top: 6.5%; display: block; width: 74.46809%; float: right; margin-right: 0; }

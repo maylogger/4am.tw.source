@@ -111,7 +111,7 @@ $off-canvas-main-bg-color: white;
 
 @include at-breakpoint($desktop) {
   $off-canvas-menu-width: 3;
-  .off-canvas-toggle-btn {
+  .toggle-menu-btn, .back {
     display: none;
   }
   .menu {
