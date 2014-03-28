@@ -1,12 +1,12 @@
 // 基本設定
-$total-columns  : 6;
+$total-columns  : 4;
 $column-width   : 72px;
 $gutter-width   : 24px;
-$grid-padding   : $gutter-width;
+$grid-padding   : 0;
 
 // add media
-$pad-columns  : 12;
-$pad-break    : 640px;
+$pad-columns  : 6;
+$pad-break    : 480px;
 $pad: $pad-break $pad-columns;
 
 $desktop-columns  : 12;
@@ -20,32 +20,107 @@ html, body {
   height: 100%;
 }
 
-.wrapper {
-  background-color: #e9e9e7;
-}
 
-.page {
-  background-color: #fff;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-#{$page-container}, .header-inner, .footer-inner {
+#{$page-container} {
   $container-style: fluid;
   @include container();
 }
 
+$off-canvas-menu-width: 100%;
+$off-canvas-main-bg-color: white;
+
+.page {
+  min-height: 100%;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  background-color: white;
+  width: 100%;
+}
+
+.main {
+  position: relative;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: $off-canvas-main-bg-color;
+  @include transition(transform .3s ease-out, max-width .5s);
+  @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
+}
+
+
+// 打開外側選單時的狀態
+.open-menu {
+
+  .page {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .menu-inner {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .main {
+    height: 100%;
+    // overflow: auto; 目前無 javascript 控制，暫時取消滾動。
+    overflow: hidden;
+    @include translateX($off-canvas-menu-width);
+  }
+
+}
+
 
 @include at-breakpoint($pad) {
-  #{$page-container}, .header-inner, .footer-inner {
-    max-width: 85%; // 限制 conntainer 寬度，並且預留左右留白空間
+  $off-canvas-menu-width: 4;
+  .menu {
+    width: columns(4);
   }
+  .main {
+
+  }
+
+  .open-menu {
+    .menu {
+
+    }
+    .main {
+      @include translateX( space(4, $total_columns) );
+    }
+  }
+
+
 }
 
 @include at-breakpoint($desktop) {
-  #{$page-container}, .header-inner, .footer-inner {
+  $off-canvas-menu-width: 3;
+  .menu {
+    position: relative;
+    @include span-columns($off-canvas-menu-width, $total_columns);
+  }
+  .main {
+    @include span-columns( ( $total_columns - $off-canvas-menu-width ) omega, $total_columns);
+  }
+  .open-menu {
+    .page {
+      overflow: visible;
+    }
+    .menu {
 
+    }
+    .main {
+      height: auto;
+      overflow: visible;
+      @include translateX( 0 );
+    }
   }
-  .container-inner {
-  }
+
 }

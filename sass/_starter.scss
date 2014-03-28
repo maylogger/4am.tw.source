@@ -8,7 +8,7 @@ $legacy-support-for-ie: false;
 $grid-background-baseline-height: $base-line-height;
 
 // class variable
-$page-container: ".container";
+$page-container: ".page";
 
 // import all things
 @import "compass";
@@ -28,21 +28,21 @@ $page-container: ".container";
 @import "starter/layout";
 @import "starter/typography";
 
-@import "starter/off-canvas";
+// @import "starter/off-canvas";
 
-@import "starter/header";
-@import "starter/footer";
-@import "starter/main-nav";
-@import "starter/headline";
-@import "starter/feature-block";
-@import "starter/grid";
-@import "starter/items";
-@import "starter/button";
-@import "starter/form";
-@import "starter/list";
-@import "starter/tab";
-@import "starter/action-bar";
-@import "starter/pagination";
+// @import "starter/header";
+// @import "starter/footer";
+// @import "starter/main-nav";
+// @import "starter/headline";
+// @import "starter/feature-block";
+// @import "starter/grid";
+// @import "starter/items";
+// @import "starter/button";
+// @import "starter/form";
+// @import "starter/list";
+// @import "starter/tab";
+// @import "starter/action-bar";
+// @import "starter/pagination";
 
 // starter for ng styles
 @import "starter/ng-page-change";
