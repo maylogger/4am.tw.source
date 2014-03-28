@@ -94,9 +94,9 @@
 .menu-list {
   @include reset-box-model;
   @include reset-list-style;
+  background: $background-gray;
   li {
     border-top: 1px solid #ccc;
-    background: $background-gray;
   }
   a {
     @include adjust-font-size-to(18px);
@@ -113,7 +113,8 @@
   }
   @include at-breakpoint($desktop) {
     @include trailer(2);
-    li { background: transparent; border: none }
+    background: transparent;
+    li { border: none }
     a {
       @include adjust-font-size-to(16px);
       color: $color-gray;
@@ -127,10 +128,13 @@
     a:hover, a.active { background: rgba($background-gray,.3); }
   }
   .social {
+    @include clearfix;
+    background: $background-gray;
     @include reset-box-model;
     @include reset-list-style;
-    @include leader(1);
+    @include padding-leader(.5);
     h2 {
+      background: $background-black;
       @include reset-box-model;
       font-weight: normal;
       padding: 0 15px;
@@ -143,6 +147,9 @@
     a:after {
       float: none;
       top: 0;
+    }
+    @include at-breakpoint($desktop) {
+      background: transparent;
     }
   }
 }

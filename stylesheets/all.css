@@ -160,7 +160,7 @@ html, body { background: #111111; height: 100%; }
 .main-foot .logo-4amtw { display: -moz-inline-stack; display: inline-block; vertical-align: middle; margin-bottom: 12px; position: relative; left: -13px; }
 .main-foot p { font-size: 13px; line-height: 24px; }
 
-.main-foot p, h1, h2, h3, h4, h5, h6, .sub-header, strong, b, .main a, .timeline-item .date, .timeline-item .title, .timeline-item .time { font-family: "DINAlternate-Bold", "Impact", "Arial", sans-serif; font-weight: bold; }
+.main-foot p, h1, h2, h3, h4, h5, h6, .sub-header, strong, b, .main a, .timeline-item .date, .timeline-item .title, .timeline-item .time { font-family: "DINAlternate-Bold", "Arial", sans-serif; font-weight: bold; }
 
 .back, .header .logo, .header .slogan { font-family: "Futura", "Futura-Medium","Arial", sans-serif; font-weight: normal; }
 
@@ -246,19 +246,20 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 800px) { .header .slogan { opacity: .7; width: 320px; left: -.7em; } }
 @media (min-width: 800px) and (max-height: 610px) { .header .slogan { bottom: -3em; } }
 
-.menu-list { margin: 0; padding: 0; border: 0; list-style: none; }
-.menu-list li { border-top: 1px solid #ccc; background: #dcddde; }
+.menu-list { margin: 0; padding: 0; border: 0; list-style: none; background: #dcddde; }
+.menu-list li { border-top: 1px solid #ccc; }
 .menu-list a { font-size: 18px; line-height: 24px; display: block; color: #444; padding: .4em 15px; }
 .menu-list a:after { font-size: 20px; line-height: 24px; content: " ›"; color: #999; color: rgba(0, 0, 0, 0.3); float: right; }
-@media (min-width: 800px) { .menu-list { margin-bottom: 48px; }
-  .menu-list li { background: transparent; border: none; }
+@media (min-width: 800px) { .menu-list { margin-bottom: 48px; background: transparent; }
+  .menu-list li { border: none; }
   .menu-list a { font-size: 16px; line-height: 24px; color: #e4e4e3; -webkit-transition: background-color 1s; -moz-transition: background-color 1s; -o-transition: background-color 1s; transition: background-color 1s; }
   .menu-list a:after { position: relative; top: -.1em; color: #e4e4e3; }
   .menu-list a:hover, .menu-list a.active { background: rgba(220, 221, 222, 0.3); } }
-.menu-list .social { margin: 0; padding: 0; border: 0; list-style: none; margin-top: 24px; }
-.menu-list .social h2 { margin: 0; padding: 0; border: 0; font-weight: normal; padding: 0 15px; font-size: 12px; line-height: 24px; }
+.menu-list .social { overflow: hidden; background: #dcddde; margin: 0; padding: 0; border: 0; list-style: none; padding-top: 12px; }
+.menu-list .social h2 { background: #111111; margin: 0; padding: 0; border: 0; font-weight: normal; padding: 0 15px; font-size: 12px; line-height: 24px; }
 .menu-list .social li { width: 50%; float: left; }
 .menu-list .social a:after { float: none; top: 0; }
+@media (min-width: 800px) { .menu-list .social { background: transparent; } }
 
 .timeline { position: relative; width: 97%; float: right; }
 @media (min-width: 480px) { .timeline { float: none; width: 95%; margin: 0 auto; } }
