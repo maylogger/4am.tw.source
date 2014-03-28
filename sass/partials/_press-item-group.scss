@@ -1,0 +1,33 @@
+.press-item {
+  @include pie-clearfix;
+  @include trailer(2.5);
+  @include at-breakpoint($desktop) {
+    @include trailer(3);
+  }
+  blockquote {
+    @include trailer(.5);
+    @include adjust-font-size-to(15px);
+    border-left: 2px solid darken($color-gray, 40%);
+  }
+  cite {
+    text-align: right;
+    float: right;
+    @include adjust-font-size-to(13px, 4/5);
+    &:before {
+      content: '';
+      position: relative;
+      top: -3px;
+      display: inline-block;
+      height: 1px;
+      width: 12px;
+      background-color: #999;
+      margin-right: 8px;
+    }
+    a {
+      @include link-colors(#999, $color-gray);
+    }
+    span {
+      @include nowrap;
+    }
+  }
+}

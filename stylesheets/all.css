@@ -220,11 +220,11 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .main a { text-decoration: underline; }
 
-.logo a { display: block; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/logo.png?1395979084'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/logo.svg?1395979092'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
+.logo a { display: block; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/logo.png?1395996380'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/logo.svg?1395996380'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
 
-.slogan p { margin: 0; padding: 0; border: 0; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/slogan.png?1395979084'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/slogan.svg?1395979092'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
+.slogan p { margin: 0; padding: 0; border: 0; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/slogan.png?1395996380'); background-repeat: no-repeat; background-position: 50% 50%; width: 320px; height: 48px; background-image: none, url('/images/slogan.svg?1395996380'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: auto; height: 0px; padding-top: 15%; }
 
-.logo-4amtw a { display: block; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/4am.png?1396029467'); background-repeat: no-repeat; background-position: 50% 50%; width: 140px; height: 70px; background-image: none, url('/images/4am.svg?1396029467'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.logo-4amtw a { display: block; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/4am.png?1396031745'); background-repeat: no-repeat; background-position: 50% 50%; width: 140px; height: 70px; background-image: none, url('/images/4am.svg?1396031745'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 .header { background: #111; position: relative; height: 88.5%; min-height: 400px; padding-top: 12px; }
 .header:after { content: ""; display: table; clear: both; }
@@ -299,3 +299,13 @@ img { max-width: 100%; margin-bottom: 24px; }
 .video-item .video { margin-bottom: 6px; position: relative; width: 100%; height: 0; padding-top: 56.25%; background: #444; }
 .video-item .video iframe, .video-item .video video { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; }
 .video-item .text { font-size: 15px; line-height: 24px; }
+
+.press-item { margin-bottom: 60px; }
+.press-item:after { content: ""; display: table; clear: both; }
+@media (min-width: 800px) { .press-item { margin-bottom: 72px; } }
+.press-item blockquote { margin-bottom: 12px; font-size: 15px; line-height: 24px; border-left: 2px solid #80807b; }
+.press-item cite { text-align: right; float: right; font-size: 13px; line-height: 19px; }
+.press-item cite:before { content: ''; position: relative; top: -3px; display: inline-block; height: 1px; width: 12px; background-color: #999; margin-right: 8px; }
+.press-item cite a { color: #999999; }
+.press-item cite a:hover { color: #e4e4e3; }
+.press-item cite span { white-space: nowrap; }
