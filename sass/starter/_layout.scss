@@ -82,8 +82,7 @@ $off-canvas-main-bg-color: white;
   }
 
   .main {
-    height: 100%;
-    overflow: hidden;
+    display: none;
   }
 
 }
@@ -114,15 +113,18 @@ $off-canvas-main-bg-color: white;
     position: fixed;
     left: 0;
     right: auto;
-    width: columns($off-canvas-menu-width);
+    // width: columns($off-canvas-menu-width);
+    @include span-columns($off-canvas-menu-width);
     @media (max-height: 620px) {
       position: static;
     }
   }
   .menu-inner {
     height: auto;
+    overflow: visible;
   }
   .main {
+    display: block;
     @include span-columns( ( $total_columns - $off-canvas-menu-width ) omega, $total_columns);
   }
   .open-menu {
@@ -135,8 +137,7 @@ $off-canvas-main-bg-color: white;
       overflow: visible;
     }
     .main {
-      height: auto;
-      overflow: visible;
+      display: block;
     }
   }
 

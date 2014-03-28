@@ -100,7 +100,6 @@
 .menu-list {
   @include reset-box-model;
   @include reset-list-style;
-  @include trailer(2);
   li {
     border-top: 1px solid #ccc;
     background: $background-gray;
@@ -119,6 +118,7 @@
     }
   }
   @include at-breakpoint($desktop) {
+    @include trailer(2);
     li { background: transparent; border: none }
     a {
       @include adjust-font-size-to(16px);
