@@ -160,6 +160,11 @@
       @include leader(1);
       background: transparent;
       a { padding-right: 0; }
+      a:after {
+        padding: 0;
+        float: none;
+        position: static;
+      }
     }
   }
 }
