@@ -14,10 +14,4 @@ module ViewHelpers
     end
     content_tag(:li, link_to(name, href, :class => active) )
   end
-
-  # FIXME: should be in a config
-  def sns_wording
-    "It's 4am in Taiwan and people are still occupying the parliament to protect democracy."
-  end
-
 end
