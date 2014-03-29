@@ -14,5 +14,4 @@ module ViewHelpers
     end
     content_tag(:li, link_to(name, href, :class => active) )
   end
-
 end

@@ -11,8 +11,8 @@ ul.menu-list
   = nav_link_to("We need YOUR support" , "/we-need-your-support/")
   = nav_link_to("Who we are" , "/who-we-are/")
   ul.social
-    h2 Sharing the Truth.
+    h2 Sharing the Truth. #CongressOccupied
     li
-      <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+      a.twitter-share-button onclick="window.open(this.href, 'twitter-share-dialog', 'width=480,height=320'); return false;" href="https://twitter.com/share?url=#{CGI.escape('http://4am.tw')}&text=#{CGI.escape(data["social-wording"])}&related=4amtw&hashtags=CongressOccupied&lang=en" = "Tweet"
     li
       <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://4am.tw'), 'facebook-share-dialog', 'width=626,height=436'); return false;">facebook</a>
