@@ -106,7 +106,8 @@
     padding-left: 20px;
     .date {
       float: left;
-      padding-right: 3em
+      padding-right: 1em;
+      @include trailer(.5);
     }
     .title {
       padding-left: 0;
