@@ -45,8 +45,8 @@
       cursor: default;
       position: static;
       width: columns(1.2, 3);
-      // float: right;
-      @include leader(3);
+      @include leader(2.5);
+      @include trailer(1);
     }
   }
   a.story {
@@ -99,6 +99,7 @@
     border-top: 1px solid #ccc;
   }
   a {
+    @include clearfix;
     @include unstyled-link;
     @include adjust-font-size-to(18px);
     display: block;
@@ -118,14 +119,19 @@
     background: transparent;
     li { border: none }
     a {
+      position: relative;
       @include adjust-font-size-to(16px);
       color: $color-gray;
-      @include transition(background-color 1s)
+      @include transition(background-color 1s);
+      @include ellipsis;
+      padding-right: 1.2em;
     }
     a:after {
-      position: relative;
-      top: -.1em;
+      position: absolute;
+      top: -3px;
+      right: 0;
       color: $color-gray;
+      padding: .4em .5em .4em 2px;
     }
     a:hover, a.active { background: rgba($background-gray,.3); }
     a.active { text-decoration: underline; }
@@ -153,6 +159,7 @@
     @include at-breakpoint($desktop) {
       @include leader(1);
       background: transparent;
+      a { padding-right: 0; }
     }
   }
 }
