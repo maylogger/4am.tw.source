@@ -104,7 +104,7 @@
     @include adjust-font-size-to(18px);
     display: block;
     color: #444;
-    padding: .4em 15px;
+    padding: .5em 15px;
 
     &:after {
       @include adjust-font-size-to(20px, 1);
@@ -124,7 +124,7 @@
       color: $color-gray;
       @include transition(background-color 1s);
       @include ellipsis;
-      padding-right: 1.2em;
+      padding: .4em 1.2em .4em 15px;
     }
     a:after {
       position: absolute;
