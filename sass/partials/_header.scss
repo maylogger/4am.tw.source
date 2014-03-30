@@ -46,7 +46,7 @@
       position: static;
       width: columns(1.2, 3);
       @include leader(2.5);
-      @include trailer(1);
+      // @include trailer(.5);
     }
   }
   a.story {
@@ -83,8 +83,8 @@
     @include at-breakpoint($desktop) {
       opacity: .7;
       width: 320px;
-      left: -.7em;
-      @media (max-height: 630px) {
+      left: -.5em;
+      @media (max-height: 620px) {
         bottom: -3em;
       }
     }
@@ -157,7 +157,7 @@
       top: 0;
     }
     @include at-breakpoint($desktop) {
-      @include leader(1);
+      @include leader(.5);
       background: transparent;
       a { padding-right: 0; }
       a:after {
