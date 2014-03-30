@@ -66,7 +66,7 @@ h6 {
   padding: 0 5em 0 .8em;
   @include adjust-font-size-to(16px, 2);
   background: rgba(black,.7);
-  @include background( linear-gradient( to right, rgba(black,.7) 50%, rgba(black,0)  ) );
+  @include background( linear-gradient( to right, rgba(#111,.7) 50%, rgba(#111,0)  ) );
   color: white;
   text-decoration: none;
   &:hover, &:active {

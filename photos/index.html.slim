@@ -11,5 +11,7 @@ h2.sub-header Photos
 .photo-item-group
   - photos.each_with_index do | photo, i |
     .photo-item
-      .photo: img.lazy data-original="/images/photos/#{photo}.jpg"
+      .photo
+        img.lazy data-original="/images/photos/#{photo}.jpg" src="/images/loading.png"
+        noscript: img src="/images/photos/#{photo}.jpg"
       p.text=data['photos'][photo]

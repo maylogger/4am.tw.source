@@ -131,4 +131,6 @@ p Chinese Version (中文版) <a href="http://infographic.appledaily.com.tw/proj
               - date.list.each do |item|
                 li= item
           - if date.image
-            .image: img.lazy data-original="/images/timeline/#{date.image}.jpg"
+            .image
+              img.lazy data-original="/images/timeline/#{date.image}.jpg" src="/images/loading.png"
+              noscript: img src="/images/timeline/#{date.image}.jpg"
