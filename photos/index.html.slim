@@ -1,13 +1,41 @@
-- photos = []
-- 26.times do |i|
-  - photos << "%03d" % (i+1)
+/ 格式： { :name => '圖檔名稱', :desc => '文字敘述' }, \
+
+- photos = [ \
+  { :name => '001' }, \
+  { :name => '002' }, \
+  { :name => '003' }, \
+  { :name => '004' }, \
+  { :name => '005' }, \
+  { :name => '006' }, \
+  { :name => '007' }, \
+  { :name => '008' }, \
+  { :name => '009' }, \
+  { :name => '010' }, \
+  { :name => '011' }, \
+  { :name => '012' }, \
+  { :name => '013' }, \
+  { :name => '014' }, \
+  { :name => '015' }, \
+  { :name => '016' }, \
+  { :name => '017' }, \
+  { :name => '018' }, \
+  { :name => '019' }, \
+  { :name => '020' }, \
+  { :name => '021' }, \
+  { :name => '022' }, \
+  { :name => '023' }, \
+  { :name => '024' }, \
+  { :name => '025' }, \
+  { :name => '026' }, \
+]
+
+- photos = photos.map{ |p| OpenStruct.new(p) }
 
 h2.sub-header Photos
-
 .photo-item-group
-  - photos.each_with_index do | photo, i |
+  - photos.each do | photo |
     .photo-item
       .photo
-        img.lazy data-original="/images/photos/#{photo}.jpg" src="/images/loading.png"
-        noscript: img src="/images/photos/#{photo}.jpg"
-      p.text=data['photos'][photo]
+        img.lazy data-original="/images/photos/#{photo.name}.jpg" src="/images/loading.png"
+        noscript: img src="/images/photos/#{photo.name}.jpg"
+      p.text=photo.desc
