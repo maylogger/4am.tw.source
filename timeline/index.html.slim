@@ -364,7 +364,7 @@
   - data << day.map{ |d| OpenStruct.new(d) }
 
 h2.sub-header Timeline
-p Chinese Version (中文版) <a href="http://infographic.appledaily.com.tw/project/2014032701" target="_blank">Click HERE</a>.<br>Scroll to <a href="#last">bottom</a>.
+p Chinese Version (中文版) <a href="http://infographic.appledaily.com.tw/project/2014032701" target="_blank">Click HERE</a>.<br>Scroll to <a href="#last">page bottom</a>.
 
 - data.each do | day |
   .timeline
@@ -391,5 +391,3 @@ p Chinese Version (中文版) <a href="http://infographic.appledaily.com.tw/proj
             .image
               img.lazy data-original="/images/timeline/#{date.image}.jpg" src="/images/loading.png"
               noscript: img src="/images/timeline/#{date.image}.jpg"
-
-#last
