@@ -133,14 +133,13 @@
       right: 0;
       color: $color-gray;
       padding: .4em .5em .4em 2px;
+      text-decoration: none;
     }
     a:hover, a.active {
+      text-decoration: underline;
       background: rgba($background-gray,.3);
-      &:after {
-        text-decoration: none;
-      }
+      &:after { text-decoration: none; }
     }
-    a.active { text-decoration: underline; }
   }
   .social {
     @include clearfix;
