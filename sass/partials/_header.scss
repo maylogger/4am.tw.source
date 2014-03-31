@@ -112,6 +112,7 @@
       color: #999;
       color: rgba(black,.3);
       float: right;
+      text-decoration: none;
     }
   }
   @include at-breakpoint($desktop) {
@@ -133,7 +134,12 @@
       color: $color-gray;
       padding: .4em .5em .4em 2px;
     }
-    a:hover, a.active { background: rgba($background-gray,.3); }
+    a:hover, a.active {
+      background: rgba($background-gray,.3);
+      &:after {
+        text-decoration: none;
+      }
+    }
     a.active { text-decoration: underline; }
   }
   .social {
