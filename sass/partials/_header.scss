@@ -136,7 +136,7 @@
       text-decoration: none;
     }
     a:hover, a.active {
-      text-decoration: underline;
+      text-decoration: none;
       background: rgba($background-gray,.3);
       &:after { text-decoration: none; }
     }
