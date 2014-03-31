@@ -76,15 +76,15 @@ $off-canvas-main-bg-color: white;
   &:before {
     bottom: auto;
     @include background(
-      linear-gradient( to bottom, rgba($background-black,.25), rgba($background-black,.125), rgba($background-black,.042), rgba($background-black,0) )
+      linear-gradient( to bottom, rgba($background-black,.75), rgba($background-black,.25), rgba($background-black,0) )
       );
   }
-  &:after {
-    top: auto;
-    @include background(
-      linear-gradient( to top, rgba($background-black,.25), rgba($background-black,.125), rgba($background-black,.042), rgba($background-black,0) )
-      );
-  }
+  // &:after {
+  //   top: auto;
+  //   @include background(
+  //     linear-gradient( to top, rgba($background-black,.5), rgba($background-black,.25), rgba($background-black,.02), rgba($background-black,0) )
+  //     );
+  // }
 }
 .main-inner {
   position: relative;

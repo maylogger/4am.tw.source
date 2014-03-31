@@ -61,7 +61,7 @@
       background-color: $background-gray;
       left: -11px;
       top: 0px;
-      @include border-radius(20px);
+      // @include border-radius(20px);
     }
   }
   .title {
@@ -79,10 +79,10 @@
       border: 4px solid $background-black;
       width: $dot-size;
       height: $dot-size;
-      background-color: $background-gray;
+      background-color: darken($background-gray, 25%);
       left: -7px;
       top: 4px;
-      @include border-radius(20px);
+      // @include border-radius(20px);
     }
   }
   p b {
