@@ -211,4 +211,7 @@ img {
       @include adjust-font-size-to(32px);
     }
   }
+  p + p {
+    text-indent: 0;
+  }
 }
