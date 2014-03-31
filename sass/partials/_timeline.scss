@@ -62,6 +62,8 @@
       left: -11px;
       top: 0px;
       // @include border-radius(20px);
+      @include rotate(45deg);
+      @include background-clip(padding-box);
     }
   }
   .title {
@@ -83,6 +85,8 @@
       left: -7px;
       top: 4px;
       // @include border-radius(20px);
+      @include rotate(45deg);
+      @include background-clip(padding-box);
     }
   }
   p b {
