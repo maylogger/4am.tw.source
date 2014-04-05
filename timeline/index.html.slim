@@ -383,40 +383,44 @@
   { :time => '20:00',\
     :text => "The rocking band “Fire Ex” sang the theme song “Island's Sunrise” with protesters on the square.",\
     :image => 't12-4',
-  },\
-  { :date => 'A New Day Will Come...', }\
+  }\
 ]
 
+- days << [ \
+  { :date => 'A New Day Will Come...' }\
+]
 
-- data = []
 - days.each do |day|
-  - data << day.map{ |d| OpenStruct.new(d) }
+  - day.map!{ |d| OpenStruct.new(d) }
 
 h2.sub-header Timeline
-p Chinese Version (中文版) <a href="http://infographic.appledaily.com.tw/project/2014032701" target="_blank">Click HERE</a>.<br>Scroll to <a href="#last">page bottom</a>.
+p
+  | Chinese Version (中文版) <a href="http://infographic.appledaily.com.tw/project/2014032701" target="_blank">Click HERE</a>.<br>Scroll to <a href="#last">page bottom</a>.
+  a.reverse-btn href="javascript: void(0)" reverse
 
-- data.each do | day |
-  .timeline
-    .timeline-bar
-    - day.each do | date |
-      .timeline-item
-        - if date.date
-          .date= date.date
-        - if date.time
-          .time= date.time
-        .timeline-item-content
-          - if date.title
-            .title= date.title
-          - if date.text
-            p
-              - if date.b
-                b= date.b
-              = date.text
-          - if date.list
-            ul
-              - date.list.each do |item|
-                li= item
-          - if date.image
-            .image
-              img.lazy data-original="/images/timeline/#{date.image}.jpg" src="/images/loading.png"
-              noscript: img src="/images/timeline/#{date.image}.jpg"
+.timeline-group.reversible
+  - days.each do | day |
+    .timeline
+      .timeline-bar
+      - day.each do | date |
+        .timeline-item
+          - if date.date
+            .date= date.date
+          - if date.time
+            .time= date.time
+          .timeline-item-content
+            - if date.title
+              .title= date.title
+            - if date.text
+              p
+                - if date.b
+                  b= date.b
+                = date.text
+            - if date.list
+              ul
+                - date.list.each do |item|
+                  li= item
+            - if date.image
+              .image
+                img.lazy data-original="/images/timeline/#{date.image}.jpg" src="/images/loading.png"
+                noscript: img src="/images/timeline/#{date.image}.jpg"
