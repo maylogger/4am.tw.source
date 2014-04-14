@@ -21,7 +21,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: $global-color;
+  // color: $global-color;
 }
 
 // heading
@@ -33,11 +33,11 @@ body {
 }
 h1, %h1 {
   @include adjust-font-size-to($font-size-l);
-  color: white;
+  // color: white;
 }
 h2 {
   @include adjust-font-size-to($font-size-m);
-  color: white;
+  // color: white;
 }
 h3 {
   @include adjust-font-size-to($font-size-m);
@@ -68,7 +68,7 @@ h6 {
   @include adjust-font-size-to(16px, 2);
   background: rgba(black,.7);
   @include background( linear-gradient( to right, rgba(#111,.7) 50%, rgba(#111,0)  ) );
-  color: white;
+  // color: white;
   text-decoration: none;
   &:hover, &:active {
     color: black;
@@ -112,13 +112,13 @@ em, i {
   font-style: normal;
   font-weight: bold;
   letter-spacing: 1px;
-  color: white;
+  // color: white;
   font-size: 14px;
 }
 
 strong, b {
   @extend %din;
-  color: white;
+  // color: white;
 }
 
 abbr {
@@ -182,7 +182,7 @@ dl {
 
 // inline style
 a {
-  @include link-colors(white);
+  @include link-colors(black);
   @include hover-link;
   img {
     border: none;

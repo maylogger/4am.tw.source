@@ -1,7 +1,8 @@
 /* debug background grid */
 body {
-  background: none, $background-black;
-  // @include baseline-grid-background;
+  background: none, lighten($background-black, 50%);
+  @include baseline-grid-background;
+  background-position: center 12px;
 }
 #{$page-container} {
   @include susy-grid-background;

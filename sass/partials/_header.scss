@@ -1,5 +1,5 @@
 .header {
-  background: #111;
+  // background: #111;
   position: relative;
   @include pie-clearfix;
   height: 88.5%;
@@ -19,7 +19,7 @@
     @include adjust-font-size-to(28px);
     @extend %futura;
     em { font-style: normal; display: block; }
-    a { color: $color-gray; display: block; }
+    a { display: block; }
     // style
     @include trailer(.5);
     width: 80%;
@@ -54,7 +54,7 @@
     position: absolute;
     bottom: 15%;
     right: columns(1.2, 3);
-    color: $color-gray;
+    // color: $color-gray;
     padding-right: .5em;
     &:after {
       content: " →";
@@ -75,7 +75,7 @@
     // normal style
     @include adjust-font-size-to(13px);
     @extend %futura;
-    color: $color-gray;
+    // color: $color-gray;
     width: 85%;
     @include at-breakpoint($pad) {
       width: 400px;
@@ -94,7 +94,7 @@
 .menu-list {
   @include reset-box-model;
   @include reset-list-style;
-  background: $background-gray;
+  background: rgba($background-gray, .5);
   li {
     border-top: 1px solid #ccc;
   }
@@ -103,14 +103,14 @@
     @include unstyled-link;
     @include adjust-font-size-to(18px);
     display: block;
-    color: #444;
+    // color: #444;
     padding: .5em 15px;
 
     &:after {
       @include adjust-font-size-to(20px, 1);
       content: " ›";
-      color: #999;
-      color: rgba(black,.3);
+      // color: #999;
+      // color: rgba(black,.3);
       float: right;
       text-decoration: none;
     }
@@ -122,7 +122,7 @@
     a {
       position: relative;
       @include adjust-font-size-to(16px);
-      color: $color-gray;
+      // color: $color-gray;
       @include transition(background-color 1s);
       @include ellipsis;
       padding: .4em 1.2em .4em 15px;
@@ -131,7 +131,7 @@
       position: absolute;
       top: -4px;
       right: 0;
-      color: $color-gray;
+      // color: $color-gray;
       padding: .4em .5em .4em 2px;
       text-decoration: none;
     }
@@ -143,7 +143,7 @@
   }
   .social {
     @include clearfix;
-    background: $background-gray;
+    background: rgba($background-gray,.5);
     @include reset-box-model;
     @include reset-list-style;
     h2 {

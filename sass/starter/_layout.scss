@@ -14,11 +14,11 @@ $desktop-break    : 800px;
 $desktop: $desktop-break $desktop-columns;
 
 // debug
-// @import "layout-debug";
+@import "layout-debug";
 
 
 html, body {
-  background: $background-black;
+  // background: $background-black;
   height: 100%;
   @include at-breakpoint($desktop) {
     height: auto;
@@ -61,24 +61,24 @@ $off-canvas-main-bg-color: white;
   @include padding-leader(1);
   position: relative;
   z-index: 100;
-  &:after,
-  &:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    z-index: 200;
-    pointer-events: none;
-  }
-  &:before {
-    bottom: auto;
-    @include background(
-      linear-gradient( to bottom, rgba($background-black,.75), rgba($background-black,.25), rgba($background-black,0) )
-      );
-  }
+  // &:after,
+  // &:before {
+  //   content: "";
+  //   position: fixed;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   height: 60px;
+  //   z-index: 200;
+  //   pointer-events: none;
+  // }
+  // &:before {
+  //   bottom: auto;
+  //   @include background(
+  //     linear-gradient( to bottom, rgba($background-black,.75), rgba($background-black,.25), rgba($background-black,0) )
+  //     );
+  // }
   // &:after {
   //   top: auto;
   //   @include background(
@@ -89,11 +89,11 @@ $off-canvas-main-bg-color: white;
 .main-inner {
   position: relative;
   z-index: 110;
-  padding: 0 $gutter-width 5em;
+  padding: 0 0 5em;
   height: 100%;
   max-width: 800px;
   margin: 0 auto;
-  width: 80%;
+  // width: 80%;
 }
 
 
