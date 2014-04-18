@@ -26,3 +26,6 @@ line_comments = false
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
+
+# build folder
+fireapp_build_path="build"
