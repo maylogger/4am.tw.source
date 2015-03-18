@@ -2,6 +2,7 @@
   position: relative;
   width: 97%;
   float: right;
+  word-break: break-all;
   @include at-breakpoint($pad) {
     float: none;
     width: 95%;
