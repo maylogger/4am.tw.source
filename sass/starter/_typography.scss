@@ -4,12 +4,13 @@
 }
 
 %futura {
-  font-family: "Futura", "Futura-Medium","Arial", sans-serif;
+  font-family: "Futura", "Futura-Medium", "Arial", sans-serif;
   font-weight: normal;
 }
 
 %palatino {
-  font-family: "Palatino Linotype", "PalatinoLinotype-Roman", "Palatino-Roman", "TimesNewRomanPSMT", "Times", serif;
+  font-family: "Palatino Linotype", "PalatinoLinotype-Roman", "Palatino-Roman",
+    "TimesNewRomanPSMT", "Times", serif;
 }
 
 %subpixel {
@@ -31,7 +32,8 @@ body {
   @extend %din;
   @include trailer(1);
 }
-h1, %h1 {
+h1,
+%h1 {
   @include adjust-font-size-to($font-size-l);
   color: white;
 }
@@ -64,17 +66,22 @@ h6 {
   z-index: 3000;
   top: 1em;
   left: 0;
-  padding: 0 5em 0 .8em;
+  padding: 0 5em 0 0.8em;
   @include adjust-font-size-to(16px, 2);
-  background: rgba(black,.7);
-  @include background( linear-gradient( to right, rgba(#111,.7) 50%, rgba(#111,0)  ) );
+  background: rgba(black, 0.7);
+  @include background(
+    linear-gradient(to right, rgba(#111, 0.7) 50%, rgba(#111, 0))
+  );
   color: white;
   text-decoration: none;
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: black;
     text-decoration: none;
-    background: rgba(white,.7);
-    @include background( linear-gradient( to right, rgba(white,.7) 50%, rgba(white,0)  ) );
+    background: rgba(white, 0.7);
+    @include background(
+      linear-gradient(to right, rgba(white, 0.7) 50%, rgba(white, 0))
+    );
   }
 }
 
@@ -107,7 +114,8 @@ p {
   }
 }
 
-em, i {
+em,
+i {
   font-family: "Courier New", "Monaco", monospace;
   font-style: normal;
   font-weight: bold;
@@ -116,7 +124,8 @@ em, i {
   font-size: 14px;
 }
 
-strong, b {
+strong,
+b {
   @extend %din;
   color: white;
 }
@@ -137,11 +146,10 @@ blockquote {
     display: block;
     color: $global-muted-color;
     &:before {
-      content: '\2014 \00A0';
+      content: "\2014 \00A0";
     }
   }
 }
-
 
 // code 示範區
 pre {
@@ -153,16 +161,17 @@ pre {
     border: 1px solid $global-divider;
     padding: rhythm(1);
     background-color: $global-spectail-block;
-    @include adjust-font-size-to( $base-font-size * 0.75 );
+    @include adjust-font-size-to($base-font-size * 0.75);
   }
 }
 
-
 // list
-ol, ul {
+ol,
+ul {
   @include leader(1);
   @include trailer(1);
-  ol, ul {
+  ol,
+  ul {
     margin: 0;
   }
 }
@@ -175,10 +184,8 @@ dl {
   }
   dd {
     margin: 0;
-
   }
 }
-
 
 // inline style
 a {
@@ -196,7 +203,7 @@ img {
 
 .main {
   a {
-    @extend %din;
+    font-weight: bold;
     text-decoration: underline;
   }
 }

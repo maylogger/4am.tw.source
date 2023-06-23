@@ -1,0 +1,34 @@
+-videos = [\
+  ['fKU7A22usls', "It's Time to protect our country by ourselves."],\
+  ['ddUyfAJXT1g', 'Stop and see/listen. we all standing right here,together.\nPray for Taiwan.'],\
+  ['pkJkz_s0ZZ8'],\
+  ['7NaMM97kh-I', 'Students were beaten by angry police at the Administrative Yuan on March 24, 2014, after five days of ongoing rallies since they had occupied the Legislature Yuan.'],\
+  ['gCOcdipNKeM', 'The Sunflower Student Movement (太陽花學運), also known as the March 18 Student Movement (318學運) or Occupy Taiwan Legislature (佔領國會事件), is a protest movement driven by a coalition'],\
+  ['py_wKhshTt0', "We are in People's Square, Taichung, Taiwan. \nThousands of people have attended the event to protest the service trade between Taiwan and China. \nMany people have come here to give their views on this agreement, including university professors and people who have just spent three days in Taipei in the legislature Yuan.\n\nThe subjects, which have been touched include the unfair footing of the agreement, and how president Ma administration was trying to push through the agreement without consulting the people, the violation of democracy, the impact of the agreement and the freedom of speech. \n\nNow let's hear what they want from the government."],\
+  ['vRgBK1yVwok', "The student-led demonstrations, nicknamed the 'Sunflower Movement', turned violent Sunday night after President Ma Ying-jeou rejected protesters' demands to retract a controversial trade pact with China. Thousands of students, who started off with a peaceful sit-in in the country's parliament building, stormed the Executive Yuan (行政院) nearby, the compound which houses the prime minister's office. In response, the government ordered riot police to evict the students, causing bloodshed. "],\
+  ['UffkKcrYe-w', "After occupying Taiwan's parliament, or the Legislative Yuan (立法院), in protest at a controversial trade and services agreement with China for five days,the student-led Sunflower Movement (太陽花學運) escalated things on March 23rd when some students decided to occupy the nearby Cabinet office, or Executive Yuan (行政院). In response, the government ordered riot police to clear the students from inside, resulting in bloodshed."],\
+  ['WF44bx8SF54', "On March 18, thousands of Taiwanese students occupied Taiwan's Legislative Yuan. A few days later, hundreds more took the Executive Yuan, before police violently evicted them, even going so far as using water cannons. They call themselves the Sunflower Revolution. Taiwanese President Ma Ying-jeou has pushed forward a trade deal with China called the Trade in Services Agreement that many in Taiwan feel will give the Chinese Communist Party control over the island, eroding away their hard won democracy, freedoms, and human rights. But Ma sees it as vital to maintain Taiwan's competitive edge in the international market and if they go back on the agreement, it will damage their credibility as a trading partner. But with the CCP gradually encroaching on Hong Kong using similar economic soft power, will Taiwan be next? Find out on this episode of China Uncensored."],\
+  ['dY2YT2hSoGA'],\
+  ['9x9H0SzqraI', "For the first time in history, the Taiwan parliament was stormed by students protesting the cross-strait trade agreement service with China that, if ratified, would allow service-sector companies in Taiwan and China to set up branches and retail operations in each other's territory."],\
+  ['o2XyhLbWKOw'],\
+  ['DnN_pvPcWyc'],\
+  ['fIQp3kNPmhc', 'A compilation video clip on police brutality on students/protesters in Taiwan'],\
+  ['Ec0aWp8pksM', "housands of students are demonstrating in Taiwan's capital Taipei to protest against a trade pact with China, with hundreds having stormed the parliament buildings. They have been occupying the chamber since Tuesday, using chairs to barricade themselves in while they demand an audience with President Ma Ying-Jeou. "], \
+  ['1wPWIIZyRb0'], \
+  ['laosDHmvEBs', '"Sunflower student movement" in Taiwan: Taiwanese students seek peaceful solution in the protest over China Trade pact'], \
+  ['Ze3pg3cQWpM', "Hundreds of students remained barricaded in Taiwan's Legislature early Wednesday in protest of the ruling party's push for a trade pact with China, which demonstrators claim will hurt the island.\nThe protesters, mostly university students, entered the main assembly hall inside the Legislative Yuan in Taipei on Tuesday night and blocked the entrances with chairs, according to images and accounts filed from the scene with CNN iReport."],\
+  ['x1rFv6BKlKw', 'We are not mobs and we always keep our rational thinking in here. So, we made up our mind to carry the video cameras by ourselves, and spread the truth by our specialty.'] \
+  ]
+
+h2.sub-header Videos
+
+p Scroll to <a href="#last">page bottom</a>.
+
+.video-item-group
+  - videos.each do | video |
+    .video-item
+      .video
+        iframe width="420" height="315" src="//www.youtube.com/embed/#{video[0]}" frameborder="0" allowfullscreen
+      -if video[1]
+        p.text= video[1].gsub('\n',"<br/>")
+

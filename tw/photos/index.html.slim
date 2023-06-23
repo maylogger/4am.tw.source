@@ -1,0 +1,97 @@
+/ :name => '圖檔名稱'
+/ :desc => '文字敘述'
+
+- photos = [ \
+  { :name => '001',\
+    :desc => 'A professor was giving a speech to students occupying the front door of the parliament',\
+    },\
+  { :name => '002',\
+    :desc => 'Riot police forcefully dragging protestors off the streets',\
+    }, \
+  { :name => '003',\
+    :desc => 'Sunflowers represent the students\' hope for a brighter future. The movement has been dubbed the “Sunflower Revolution”',\
+    }, \
+  { :name => '004',\
+    :desc => 'A student painting the message, “When dictatorship is a fact, revolution is a right,” which was quoted from the Carnation Revolution in Portugal, 1974',\
+    }, \
+  { :name => '005',\
+    :desc => 'Protestors, claiming a non-violent, peaceful movement',\
+    }, \
+  { :name => '006',\
+    :desc => 'Professor Huang Kuo-Chang was having a speech',\
+    }, \
+  { :name => '007',\
+    :desc => 'Inside the Parliament',\
+    }, \
+  { :name => '008',\
+    :desc => 'A satellite uplink truck full of post-it notes with the students’ blaming and rebuking words, due to the media’s biased reports and smear campaigns against the students',\
+    }, \
+  { :name => '009',\
+    :desc => 'An injured student, beaten by the police',\
+    }, \
+  { :name => '010',\
+    :desc => 'Riot police violently assaulting a defenseless professor',\
+    }, \
+  { :name => '011',\
+    :desc => 'Riot police waiting for orders to clear the crowd before the clash escalated',\
+    }, \
+  { :name => '012',\
+    :desc => 'Activities inside the parliament are streamed live online for the world to see',\
+    }, \
+  { :name => '013',\
+    :desc => 'The medical volunteers holding photos of the pioneer physicians who fought for Taiwanese democracy',\
+    }, \
+  { :name => '014',\
+    :desc => 'The police stand guard',\
+    }, \
+  { :name => '015',\
+    :desc => 'Protestors surrounding the Parliament',\
+    }, \
+  { :name => '016',\
+    :desc => 'Protestors surrounding the Executive Yuan (the Cabinet office)',\
+    }, \
+  { :name => '017',\
+    :desc => 'Anti riot police, wearing helmets and clutching shields',\
+    }, \
+  { :name => '018',\
+    :desc => 'The sit-in in front of the Parliament, organized by students.',\
+    }, \
+  { :name => '019',\
+    :desc => 'Protestors in the rain',\
+    }, \
+  { :name => '020',\
+    :desc => 'Protestors inside the subway station of Kaohsiung, located in southern-western Taiwan, show their support for the students.',\
+    }, \
+  { :name => '021',\
+    :desc => 'Unarmed students raising their hands, claiming their principle of nonviolence',\
+    }, \
+  { :name => '022',\
+    :desc => 'Police lowered their shields and began hitting the students with batons while the students were simply holding a peaceful demonstration.',\
+    }, \
+  { :name => '023',\
+    :desc => 'Anti riot police aiming for the students\' heads and violently dragging them off the streets.',\
+    }, \
+  { :name => '024',\
+    :desc => 'The police used high pressure water cannons to disperse the protestors',\
+    }, \
+  { :name => '025',\
+    :desc => 'Students adhere to the principle of nonviolence.',\
+    }, \
+  { :name => '026',\
+    :desc => 'A Buddhist monk holding an upside down national flag of Taiwan to show that democracy is in danger and the current political situation is against the country\'s founding principles.',\
+    }, \
+]
+
+- photos = photos.map{ |p| OpenStruct.new(p) }
+
+h2.sub-header Photos
+
+p Scroll to <a href="#last">page bottom</a>.
+
+.photo-item-group
+  - photos.each do | photo |
+    .photo-item
+      .photo
+        img.lazy data-original="/images/photos/#{photo.name}.jpg" src="/images/loading.png"
+        noscript: img src="/images/photos/#{photo.name}.jpg"
+      p.text=photo.desc
