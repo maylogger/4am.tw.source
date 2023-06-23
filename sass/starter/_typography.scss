@@ -1,3 +1,8 @@
+%base {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+
 %din {
   font-family: "DINAlternate-Bold", "Arial", sans-serif;
   font-weight: bold;
@@ -61,7 +66,7 @@ h6 {
 
 .main .back {
   cursor: pointer;
-  @extend %futura;
+  @extend %base;
   position: fixed;
   z-index: 3000;
   top: 1em;
