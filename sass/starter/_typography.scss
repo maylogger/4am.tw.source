@@ -1,29 +1,11 @@
-%base {
-  font-family: "Arial", sans-serif;
-  font-weight: bold;
-}
-
-%din {
-  font-family: "DINAlternate-Bold", "Arial", sans-serif;
-  font-weight: bold;
-}
-
-%futura {
-  font-family: "Futura", "Futura-Medium", "Arial", sans-serif;
-  font-weight: normal;
-}
-
-%palatino {
-  font-family: "Palatino Linotype", "PalatinoLinotype-Roman", "Palatino-Roman",
-    "TimesNewRomanPSMT", "Times", serif;
-}
-
 %subpixel {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body {
-  @extend %palatino;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: 'liga' 1, 'calt' 1, 'ss01' 1; /* fix for Chrome */
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -33,8 +15,7 @@ body {
 // heading
 #{headings()} {
   @include reset-box-model;
-  font-weight: normal;
-  @extend %din;
+  font-weight: semibold;
   @include trailer(1);
 }
 h1,
@@ -66,7 +47,6 @@ h6 {
 
 .main .back {
   cursor: pointer;
-  @extend %base;
   position: fixed;
   z-index: 3000;
   top: 1em;
@@ -91,7 +71,6 @@ h6 {
 }
 
 .sub-header {
-  @extend %din;
   @extend %h1;
   @include leader(2.5);
   @include at-breakpoint($desktop) {
@@ -121,7 +100,7 @@ p {
 
 em,
 i {
-  font-family: "Courier New", "Monaco", monospace;
+  font-family: 'Courier New', 'Monaco', monospace;
   font-style: normal;
   font-weight: bold;
   letter-spacing: 1px;
@@ -131,7 +110,7 @@ i {
 
 strong,
 b {
-  @extend %din;
+  font-weight: semibold;
   color: white;
 }
 
@@ -151,7 +130,7 @@ blockquote {
     display: block;
     color: $global-muted-color;
     &:before {
-      content: "\2014 \00A0";
+      content: '\2014 \00A0';
     }
   }
 }
@@ -159,7 +138,7 @@ blockquote {
 // code 示範區
 pre {
   code {
-    font-family: "Monaco", MonoSpace, sans-serif;
+    font-family: 'Monaco', MonoSpace, sans-serif;
     display: block;
     @include leader(1);
     @include trailer(1);
