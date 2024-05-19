@@ -7,7 +7,6 @@
     width: 95%;
     margin: 0 auto;
   }
-
 }
 .timeline-bar {
   position: absolute;
@@ -24,14 +23,14 @@
   @include trailer(1);
   &:last-child:after {
     position: relative;
-    content: "";
+    content: '';
     display: block;
     height: 48px;
     width: 2px;
     margin-bottom: -24px;
     @include background(
-      linear-gradient( rgba(black,0), rgba(black,1) )
-      );
+      linear-gradient(rgba(black, 0), rgba($background-black, 1))
+    );
     left: -26px;
     @include at-breakpoint($desktop) {
       left: -20px;
@@ -46,10 +45,9 @@
     @include padding-trailer(1);
   }
   .date {
-    @extend %din;
-    @include adjust-font-size-to(20px);
+    @include adjust-font-size-to(16px);
+    font-feature-settings: 'tnum';
     font-weight: bold;
-    background-color: $background-black;
     color: $color-gray;
     &:before {
       $dot-size: 12px;
@@ -73,7 +71,6 @@
     font-weight: bold;
   }
   .time {
-    @extend %din;
     $dot-size: 8px;
     &:before {
       content: '';
@@ -111,7 +108,7 @@
     .date {
       float: left;
       padding-right: 1em;
-      @include trailer(.5);
+      @include trailer(0.5);
     }
     .title {
       padding-left: 0;
@@ -119,14 +116,24 @@
     .time {
       float: left;
     }
+    .date,
+    .time {
+      position: sticky;
+      top: 24px;
+      margin-left: -1.25em;
+      padding-left: 1.25em;
+      z-index: 1000;
+      font-feature-settings: 'tnum';
+    }
   }
 }
 
 .timeline-item-content {
-
   @include at-breakpoint($desktop) {
     @include span-columns(7 omega, 9);
   }
 }
 
-#last { clear: both; }
+#last {
+  clear: both;
+}
