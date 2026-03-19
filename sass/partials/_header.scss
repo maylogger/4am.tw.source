@@ -154,22 +154,15 @@
       @include adjust-font-size-to(12px);
     }
     li {
-      width: 50%;
-      float: left;
+      width: 100%;
+      float: none;
     }
     a:after {
-      float: none;
-      top: 0;
+      display: none;
     }
     @include at-breakpoint($desktop) {
       @include leader(.5);
       background: transparent;
-      a { padding-right: 0; }
-      a:after {
-        padding: 0;
-        float: none;
-        position: static;
-      }
     }
   }
 }
