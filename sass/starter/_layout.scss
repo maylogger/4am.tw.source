@@ -61,30 +61,6 @@ $off-canvas-main-bg-color: white;
   @include padding-leader(1);
   position: relative;
   z-index: 100;
-  &:after,
-  &:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    z-index: 200;
-    pointer-events: none;
-  }
-  &:before {
-    bottom: auto;
-    @include background(
-      linear-gradient( to bottom, rgba($background-black,.75), rgba($background-black,.25), rgba($background-black,0) )
-      );
-  }
-  // &:after {
-  //   top: auto;
-  //   @include background(
-  //     linear-gradient( to top, rgba($background-black,.5), rgba($background-black,.25), rgba($background-black,.02), rgba($background-black,0) )
-  //     );
-  // }
 }
 .main-inner {
   position: relative;
