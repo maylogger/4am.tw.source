@@ -11,24 +11,16 @@ $('img.lazy').lazyload({
   effect: 'fadeIn',
 })
 
-var banana =
-  '' +
-  '\n' +
-  '🍌🍌🍌🍌🍌\n' +
-  '❖2022\n' +
-  '↓　黃國昌\n' +
-  '↓\n' +
-  '❖2023\n' +
-  '↓　白國昌\n' +
-  '↓\n' +
-  '❖2024\n' +
-  '↓　藍國昌\n' +
-  '↓\n' +
-  '❖2025\n' +
-  '↓　紅國昌\n' +
-  '↓\n' +
-  '❖????\n' +
-  '🍌🍌🍌🍌🍌\n' +
-  '\n' +
-  ''
-console.log(banana)
+$(document).on('click', '.copy-share-btn', function (e) {
+  e.preventDefault()
+  var btn = $(this)
+  var text = btn.data('share')
+  var copiedLabel = btn.data('copied')
+  var originalLabel = btn.text()
+  navigator.clipboard.writeText(text).then(function () {
+    btn.text(copiedLabel)
+    setTimeout(function () {
+      btn.text(originalLabel)
+    }, 3000)
+  })
+})
